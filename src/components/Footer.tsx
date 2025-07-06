@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Music, Dance, Mail, Phone, Instagram, Youtube, Facebook, MessageCircle } from 'lucide-react';
+import { Music, Music2, Mail, Phone, Instagram, Youtube, Facebook, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start space-x-2 mb-4">
               <div className="flex items-center space-x-1">
-                <Dance className="h-6 w-6 text-coral-400" />
+                <Music2 className="h-6 w-6 text-coral-400" />
                 <Music className="h-6 w-6 text-gold-400" />
               </div>
               <span className="text-xl font-bold">Artistic Soul</span>
