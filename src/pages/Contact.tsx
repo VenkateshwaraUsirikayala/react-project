@@ -12,7 +12,7 @@ const Contact = () => {
     preferredTime: ''
   });
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -20,7 +20,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // For now, just log the form data
     console.log('Form submitted:', formData);
@@ -270,7 +270,7 @@ const Contact = () => {
                 </p>
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div>
-                    <div className="text-3xl font-bold">< 24hrs</div>
+                    <div className="text-3xl font-bold">&lt; 24hrs</div>
                     <div className="text-sm opacity-80">Response Time</div>
                   </div>
                   <div>
