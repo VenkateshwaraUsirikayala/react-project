@@ -13,6 +13,7 @@ import Services from "./pages/Services";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import {Analytics} from "@vercel/analytics/next";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => (
           <Footer />
         </div>
       </BrowserRouter>
+      <Analytics/>
     </TooltipProvider>
   </QueryClientProvider>
 );
