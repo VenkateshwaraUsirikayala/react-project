@@ -2,6 +2,7 @@
 import React from 'react';
 import { ArrowRight, Star, Users, Calendar, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import {Analytics} from "@vercel/analytics/next";
 
 const Home = () => {
   const services = [
@@ -34,6 +35,7 @@ const Home = () => {
 
   return (
     <div className="pt-20">
+      <Analytics/>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-coral-100 via-purple-50 to-gold-100"></div>
