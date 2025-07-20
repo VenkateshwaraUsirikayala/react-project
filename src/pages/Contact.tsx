@@ -40,57 +40,82 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "hello@artisticsoul.com",
+      content: "contact@bhavanjali.art",
       description: "I respond within 24 hours",
-      color: "from-coral-500 to-pink-500"
+      color: "from-coral-500 to-pink-500",
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 98765 43210",
+      content: "+91 91136 94811",
       description: "Call or WhatsApp anytime",
-      color: "from-purple-500 to-indigo-500"
+      color: "from-purple-500 to-indigo-500",
     },
     {
       icon: MapPin,
       title: "Location",
-      content: "Mumbai, Maharashtra",
-      description: "Studio & Online classes",
-      color: "from-gold-500 to-yellow-500"
+      content: "Bangalore",
+      description: "Online classes",
+      color: "from-gold-500 to-yellow-500",
     },
     {
       icon: Clock,
       title: "Hours",
       content: "Mon-Sat: 8AM-8PM",
       description: "Sunday by appointment",
-      color: "from-green-500 to-emerald-500"
-    }
+      color: "from-green-500 to-emerald-500",
+    },
   ];
 
   const socialLinks = [
-    { icon: Instagram, platform: "Instagram", handle: "@artisticsoul_dance", color: "hover:text-pink-600" },
-    { icon: Youtube, platform: "YouTube", handle: "Artistic Soul Channel", color: "hover:text-red-600" },
-    { icon: Facebook, platform: "Facebook", handle: "Artistic Soul Academy", color: "hover:text-blue-600" },
-    { icon: MessageCircle, platform: "WhatsApp", handle: "+91 98765 43210", color: "hover:text-green-600" }
+    {
+      icon: Instagram,
+      platform: "Instagram",
+      handle: "@bharthanatyam_carnatic_music",
+      color: "hover:text-pink-600",
+    },
+    // ,
+    // {
+    //   icon: Youtube,
+    //   platform: "YouTube",
+    //   handle: "Artistic Soul Channel",
+    //   color: "hover:text-red-600",
+    // }
+    {
+      icon: Facebook,
+      platform: "Facebook",
+      handle: "Artistic Soul Academy",
+      color: "hover:text-blue-600",
+    },
+    {
+      icon: MessageCircle,
+      platform: "WhatsApp",
+      handle: "+91 91136 94811",
+      color: "hover:text-green-600",
+    },
   ];
 
   const faqs = [
     {
       question: "Do you offer trial classes?",
-      answer: "Yes! New students can book a complimentary 30-minute trial class to experience my teaching style and see if we're a good fit."
+      answer:
+        "Yes! New students can book a complimentary 30-minute trial class to experience my teaching style and see if we're a good fit.",
     },
     {
       question: "What age groups do you teach?",
-      answer: "I welcome students of all ages, from 4-year-old beginners to adult learners. My teaching approach is tailored to each age group's needs."
+      answer:
+        "I welcome students of all ages, from 4-year-old beginners to adult learners. My teaching approach is tailored to each age group's needs.",
     },
     {
       question: "Do I need any prior experience?",
-      answer: "Absolutely not! I have students ranging from complete beginners to advanced performers. Everyone starts somewhere."
+      answer:
+        "Absolutely not! I have students ranging from complete beginners to advanced performers. Everyone starts somewhere.",
     },
     {
       question: "What should I wear to dance classes?",
-      answer: "Comfortable, stretchy clothing that allows free movement. For Bharatanatyam, traditional practice wear is preferred but not mandatory for beginners."
-    }
+      answer:
+        "Comfortable, stretchy clothing that allows free movement. For Bharatanatyam, traditional practice wear is preferred but not mandatory for beginners.",
+    },
   ];
 
   return (
@@ -99,11 +124,15 @@ const Contact = () => {
       <section className="py-20 bg-gradient-to-br from-coral-50 via-purple-50 to-gold-50">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Let's <span className="bg-gradient-to-r from-coral-500 to-purple-600 bg-clip-text text-transparent">Connect</span>
+            Let's{" "}
+            <span className="bg-gradient-to-r from-coral-500 to-purple-600 bg-clip-text text-transparent">
+              Connect
+            </span>
           </h1>
           <p className="text-xl text-gray-700 leading-relaxed">
-            Ready to start your artistic journey? I'd love to hear from you! 
-            Whether you have questions, want to book a class, or just want to chat about dance and music.
+            Ready to start your artistic journey? I'd love to hear from you!
+            Whether you have questions, want to book a class, or just want to
+            chat about dance and music.
           </p>
         </div>
       </section>
@@ -113,15 +142,21 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, index) => (
-              <div 
+              <div
                 key={index}
                 className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
               >
-                <div className={`inline-flex p-3 bg-gradient-to-r ${info.color} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  className={`inline-flex p-3 bg-gradient-to-r ${info.color} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}
+                >
                   <info.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{info.title}</h3>
-                <p className="text-gray-800 font-semibold mb-1">{info.content}</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  {info.title}
+                </h3>
+                <p className="text-gray-800 font-semibold mb-1">
+                  {info.content}
+                </p>
                 <p className="text-gray-600 text-sm">{info.description}</p>
               </div>
             ))}
@@ -133,21 +168,26 @@ const Contact = () => {
       <section className="py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
             {/* Contact Form */}
             <div className="bg-white p-8 rounded-2xl shadow-xl">
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Send Me a Message</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Send Me a Message
+                </h2>
                 <p className="text-gray-600">
-                  Fill out the form below and I'll get back to you as soon as possible. 
-                  Don't forget to mention your preferred class type and timing!
+                  Fill out the form below and I'll get back to you as soon as
+                  possible. Don't forget to mention your preferred class type
+                  and timing!
                 </p>
               </div>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Full Name *
                     </label>
                     <input
@@ -162,7 +202,10 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Email Address *
                     </label>
                     <input
@@ -177,10 +220,13 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Phone Number
                     </label>
                     <input
@@ -190,11 +236,14 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-coral-500 focus:border-coral-500 transition-colors duration-300"
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 91136 94811"
                     />
                   </div>
                   <div>
-                    <label htmlFor="serviceType" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="serviceType"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Interested Service *
                     </label>
                     <select
@@ -206,19 +255,27 @@ const Contact = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-coral-500 focus:border-coral-500 transition-colors duration-300"
                     >
                       <option value="">Select a service</option>
-                      <option value="vocal-coaching">One-on-One Vocal Coaching</option>
+                      <option value="vocal-coaching">
+                        One-on-One Vocal Coaching
+                      </option>
                       <option value="group-dance">Weekly Group Dance</option>
                       <option value="combo-pass">10-Class Combo Pass</option>
-                      <option value="performance-prep">Performance Preparation</option>
-                      <option value="wedding">Wedding Choreography</option>
+                      <option value="performance-prep">
+                        Performance Preparation
+                      </option>
                       <option value="online">Online Classes</option>
-                      <option value="other">Other (please specify in message)</option>
+                      <option value="other">
+                        Other (please specify in message)
+                      </option>
                     </select>
                   </div>
                 </div>
-                
+
                 <div>
-                  <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="preferredTime"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Preferred Time
                   </label>
                   <input
@@ -231,9 +288,12 @@ const Contact = () => {
                     placeholder="e.g., Weekday evenings, Saturday mornings"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Message *
                   </label>
                   <textarea
@@ -247,7 +307,7 @@ const Contact = () => {
                     placeholder="Tell me about your goals, experience level, or any questions you have..."
                   ></textarea>
                 </div>
-                
+
                 <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-coral-500 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
@@ -257,16 +317,17 @@ const Contact = () => {
                 </button>
               </form>
             </div>
-            
+
             {/* Additional Info & Social */}
             <div className="space-y-8">
-              
               {/* Quick Response Promise */}
               <div className="bg-gradient-to-r from-coral-500 to-purple-600 text-white p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold mb-4">Quick Response Guarantee</h3>
+                <h3 className="text-2xl font-bold mb-4">
+                  Quick Response Guarantee
+                </h3>
                 <p className="text-lg mb-6 opacity-90">
-                  I personally read and respond to every message within 24 hours. 
-                  Your artistic journey is important to me!
+                  I personally read and respond to every message within 24
+                  hours. Your artistic journey is important to me!
                 </p>
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div>
@@ -279,12 +340,15 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-              
+
               {/* Social Media */}
               <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Follow My Journey</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                  Follow My Journey
+                </h3>
                 <p className="text-gray-600 mb-6">
-                  Stay connected for daily inspiration, student highlights, and behind-the-scenes moments.
+                  Stay connected for daily inspiration, student highlights, and
+                  behind-the-scenes moments.
                 </p>
                 <div className="space-y-4">
                   {socialLinks.map((social, index) => (
@@ -295,14 +359,17 @@ const Contact = () => {
                     >
                       <social.icon className="h-6 w-6 text-gray-600" />
                       <div>
-                        <div className="font-semibold text-gray-900">{social.platform}</div>
-                        <div className="text-sm text-gray-600">{social.handle}</div>
+                        <div className="font-semibold text-gray-900">
+                          {social.platform}
+                        </div>
+                        <div className="text-sm text-gray-600">
+                          {social.handle}
+                        </div>
                       </div>
                     </a>
                   ))}
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -312,27 +379,32 @@ const Contact = () => {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
             <p className="text-xl text-gray-600">
-              Quick answers to common questions about my classes and teaching approach
+              Quick answers to common questions about my classes and teaching
+              approach
             </p>
           </div>
-          
+
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-gradient-to-r from-coral-50 to-purple-50 p-6 rounded-2xl hover:shadow-lg transition-shadow duration-300"
               >
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
+                <h3 className="text-lg font-bold text-gray-900 mb-3">
+                  {faq.question}
+                </h3>
                 <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Have more questions?</p>
-            <a 
+            <a
               href="#contact-form"
               className="inline-flex items-center space-x-2 text-coral-600 hover:text-coral-700 font-semibold transition-colors duration-300"
             >
@@ -344,27 +416,36 @@ const Contact = () => {
       </section>
 
       {/* Map/Location Section (Placeholder) */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
+      {/* <section className="py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Visit My Studio</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Visit My Studio
+            </h2>
             <p className="text-xl text-gray-600">
-              Located in the heart of Mumbai, easily accessible by public transport
+              Located in the heart of Mumbai, easily accessible by public
+              transport
             </p>
           </div>
-          
+
           <div className="bg-white p-8 rounded-2xl shadow-xl">
             <div className="aspect-video bg-gradient-to-br from-coral-100 to-purple-100 rounded-lg flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="h-16 w-16 text-coral-500 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Studio Location</h3>
-                <p className="text-gray-600">Interactive map will be displayed here</p>
-                <p className="text-sm text-gray-500 mt-2">Mumbai, Maharashtra - Exact address shared upon booking</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  Studio Location
+                </h3>
+                <p className="text-gray-600">
+                  Interactive map will be displayed here
+                </p>
+                <p className="text-sm text-gray-500 mt-2">
+                  Mumbai, Maharashtra - Exact address shared upon booking
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
