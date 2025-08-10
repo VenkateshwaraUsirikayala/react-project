@@ -11,7 +11,7 @@ const Navigation = () => {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About Me' },
     { path: '/portfolio', label: 'Portfolio' },
-    { path: '/services', label: 'Services & Pricing' },
+    // { path: '/services', label: 'Services & Pricing' },
     { path: '/testimonials', label: 'Testimonials' },
     { path: '/contact', label: 'Contact' },
   ];
@@ -29,7 +29,7 @@ const Navigation = () => {
               <Music className="h-6 w-6 text-purple-600 group-hover:scale-110 transition-transform duration-300" />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-coral-500 to-purple-600 bg-clip-text text-transparent">
-              Bhavanjali
+              bhavanjali
             </span>
           </Link>
 
