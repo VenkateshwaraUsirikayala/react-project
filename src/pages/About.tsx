@@ -5,7 +5,7 @@ import { Award, Music, Users, Heart, Star, Calendar } from 'lucide-react';
 const About = () => {
   const achievements = [
     {
-      year: "2015",
+      year: "2018",
       title: "Started Teaching Journey",
       description: "Began my career as a dance and vocal instructor",
       icon: Calendar
@@ -17,19 +17,19 @@ const About = () => {
       icon: Star
     },
     {
-      year: "2019",
-      title: "Certified Instructor",
-      description: "Completed advanced certification in Bharatanatyam",
+      year: "2023",
+      title: "Trained & Accredited Bharatanatyam Mentor",
+      description: "Successfully completed Advanced Bharatanatyam Certification from Bridge Academy, Chennai, specializing in adavus, abhinaya, and choreography.",
       icon: Award
     },
     {
-      year: "2021",
-      title: "Studio Launch",
-      description: "Opened my own teaching studio and online classes",
+      year: "2024",
+      title: "Advanced Certified Bharatanatyam Teacher",
+      description: "Trained and certified in Advanced Bharatanatyam at Gangubai Hangal University,Mysore., upholding the cultural heritage and spiritual depth of this classical art form",
       icon: Music
     },
     {
-      year: "2023",
+      year: "2025",
       title: "500+ Students",
       description: "Reached milestone of training over 500 students",
       icon: Users
@@ -38,9 +38,7 @@ const About = () => {
 
   const skills = [
     { name: "Bharatanatyam", level: 95 },
-    { name: "Western Vocals", level: 90 },
-    { name: "Contemporary Dance", level: 85 },
-    { name: "Bollywood Dance", level: 92 },
+    // { name: "Western Vocals", level: 90 },
     { name: "Classical Vocals", level: 88 },
     { name: "Stage Performance", level: 96 }
   ];
@@ -94,7 +92,7 @@ const About = () => {
 
           <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
             <p className="text-xl mb-8">
-              My love affair with dance and music began at the tender age of 5.
+              My love affair with dance and music began at the tender age of 12.
               What started as childhood curiosity blossomed into a deep,
               unwavering passion that would define my entire life's purpose.
             </p>
@@ -106,12 +104,7 @@ const About = () => {
                   Dance Journey
                 </h3>
                 <p>
-                  I began my formal training in Bharatanatyam under the guidance
-                  of renowned Guru Smt. Priya Krishnan. The discipline, grace,
-                  and storytelling aspect of this classical dance form became
-                  the foundation of my artistic expression. Over the years, I
-                  expanded my repertoire to include contemporary and Bollywood
-                  dance styles.
+                  I began my formal training in Bharatanatyam under the guidance of renowned Guru Smt. Chitra Aravind. The discipline, grace, and storytelling aspect of this classical dance form became the foundation of my artistic expression.
                 </p>
               </div>
 
@@ -121,11 +114,7 @@ const About = () => {
                   Vocal Training
                 </h3>
                 <p>
-                  My vocal journey encompasses both Western and Indian classical
-                  traditions. Trained under internationally acclaimed vocalist
-                  Dr. Ramesh Kumar, I developed a versatile voice capable of
-                  expressing diverse emotions and styles. From soulful ballads
-                  to energetic pop numbers, music became my second language.
+                  My vocal journey encompasses Indian classical traditions.  I am trained in carnatic vocal under Guru Smt. Mangala and Smt. Sudha , I developed a versatile voice capable of expressing diverse emotions and styles.
                 </p>
               </div>
             </div>
@@ -135,16 +124,13 @@ const About = () => {
                 Teaching Philosophy
               </h3>
               <p className="text-lg">
-                I believe that every individual has a unique artistic voice
-                waiting to be discovered. My approach is not just about teaching
-                techniques, but about nurturing confidence, creativity, and
-                self-expression. I create a safe, supportive environment where
-                students can explore their potential without fear of judgment.
+                I believe that every individual carries a unique rhythm and expression that can be discovered through Bharatanatyam. My approach goes beyond teaching adavus and choreography—it is about nurturing discipline, grace, creativity, and inner confidence.
               </p>
               <p className="text-lg mt-4">
-                Whether you're 5 or 50, a beginner or advanced performer, my
-                mission is to help you find joy in movement and music while
-                building the skills that will serve you for a lifetime.
+                I strive to create a supportive and respectful environment where students can explore the spiritual and artistic depth of this classical dance form without fear of judgment.
+              </p>
+              <p className="text-lg mt-4">
+                Whether you are a child taking your first steps in dance or an adult deepening your practice, my mission is to help you experience the joy of movement, connect with the rich cultural heritage of Bharatanatyam, and build skills that will last a lifetime.
               </p>
             </div>
           </div>
