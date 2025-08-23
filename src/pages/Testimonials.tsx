@@ -12,7 +12,9 @@ const Testimonials = () => {
       role: "",
       content: "I am thankful to Harshita madam for the bharatnatyam  online class. She pays attention to all kids online. Batches are small. She is very regular in her classes, compensates for the classes missed by the child.",
       rating: 5,
-      category: "parent"
+      category: "parent",
+      state: "Maharashtra",
+      country: 'India'
     },
     {
       name: "Kajal Patil",
@@ -249,6 +251,22 @@ const Testimonials = () => {
                                           'bg-indigo-100 text-indigo-700'
                       }`}>
                         {testimonial.category === 'parent' ? 'Parent Review' :
+                            testimonial.category === 'adult' ? 'Adult Student' :
+                                testimonial.category === 'teen' ? 'Teen Student' :
+                                    testimonial.category === 'professional' ? 'Professional' :
+                                        'Organization'}
+                      </span>
+                      </div>
+
+                      <div className="mt-6">
+                      <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
+                          testimonial.country === 'India' ? 'bg-coral-100 text-coral-700' :
+                              testimonial.category === 'adult' ? 'bg-purple-100 text-purple-700' :
+                                  testimonial.category === 'teen' ? 'bg-gold-100 text-gold-700' :
+                                      testimonial.category === 'professional' ? 'bg-green-100 text-green-700' :
+                                          'bg-indigo-100 text-indigo-700'
+                      }`}>
+                        {testimonial.country === 'India' ? testimonial.state+", "+ testimonial.country:
                             testimonial.category === 'adult' ? 'Adult Student' :
                                 testimonial.category === 'teen' ? 'Teen Student' :
                                     testimonial.category === 'professional' ? 'Professional' :
