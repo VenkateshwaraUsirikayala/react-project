@@ -1,54 +1,56 @@
 
 import React from 'react';
 import { Star, Quote, Users, Award, Heart, TrendingUp } from 'lucide-react';
+import Avatar from "react-avatar";
+import {CarouselProvider} from "pure-react-carousel";
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Priya Sharma",
-      role: "Parent of 8-year-old student",
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=100&h=100&fit=crop&crop=face",
-      content: "My daughter has blossomed under her guidance. Not only has she learned beautiful Bharatanatyam techniques, but her confidence has grown tremendously. The individual attention and patient teaching style makes all the difference.",
+      name: "Kajal Patil",
+      // role: "Parent of 8-year-old student",
+      role: "",
+      content: "I love attending Bharatnatyam classes offered by Ms. Harshitha. She is highly flexible and very thorough with her teachings. I joined her classes at the age of 37 and for the last 3 years I have acquired strength, flexibility and overall increased stamina. I am honored to be a student of Ms. Harshitha and thankful for her passion & dedication towards the students.",
       rating: 5,
       category: "parent"
     },
     {
-      name: "Rahul Mehta",
-      role: "Adult Vocal Student",
-      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=100&h=100&fit=crop&crop=face",
-      content: "I started vocal lessons at 32 with no prior experience. Her teaching method is so encouraging and tailored to my pace. I can now confidently sing at family gatherings and even performed at my friend's wedding!",
-      rating: 5,
+      name: "Snehal Patil",
+      // role: "Adult Vocal Student",
+      role: "",
+      content: "I have enjoyed learning Bharatnatyam Adavus and Taalam as well as a song within first few months. I like how Harshitha Ma'am wants us to perfect each step with eyes, neck and hip movements.\\nIt's great that Harshitha Ma'am makes up for the missed classes.",
+      rating: 4,
       category: "adult"
     },
     {
-      name: "Dr. Kavita Patel",
-      role: "Collaborating Artist",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=face",
-      content: "Working with her on our cultural festival was incredible. Her choreography was innovative, and her ability to train a large group of performers in such a short time was impressive. A true professional!",
+      name: "Mishika Mishra",
+      // role: "Collaborating Artist",
+      role: "",
+      content: "Well structured and organised  classes and the practice is almost completed during classes itself\\nAfter multiple trials of other offline and online fine arts classes we landed with Harshitha teacher and then no looking back. Though I was sceptical about online classes, Harshitha bested with her teaching style and made us learning the expert.",
       rating: 5,
       category: "professional"
     },
     {
-      name: "Aarti Singh",
-      role: "Teen Dance Student",
-      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=100&h=100&fit=crop&crop=face",
-      content: "She makes learning dance so fun! I love how she combines traditional Bharatanatyam with modern styles. Her classes are the highlight of my week, and I've made so many friends here too.",
+      name: "Ch.Varnica",
+      // role: "Teen Dance Student",
+      role: "",
+      content: "My daughter have been learning from Harshitha mam since one and half years and I'm constantly impressed by her dedication .She creates a fun and supportive atmosphere.",
       rating: 5,
       category: "teen"
     },
     {
-      name: "Mumbai Cultural Society",
-      role: "Event Organizer",
-      image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=100&h=100&fit=crop&crop=face",
-      content: "We've hired her for multiple events, and each performance has been outstanding. Her students are well-prepared, disciplined, and truly showcase the beauty of Indian classical arts. Highly recommended!",
+      name: "Shanaya Singh",
+      // role: "Event Organizer",
+      role: "",
+      content: "Thank you so much for teaching us with so much love and patience. I really enjoy every class and love learning Bharatanatyam from you. Your way of explaining each step and expression makes it easy to understand and so much fun",
       rating: 5,
       category: "organization"
     },
     {
-      name: "Vikash Kumar",
-      role: "Working Professional",
-      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=100&h=100&fit=crop&crop=face",
-      content: "Taking vocal lessons after work has been therapeutic. Her flexible scheduling and understanding nature made it possible for me to pursue my passion despite a busy corporate job. My stress levels have significantly reduced!",
+      name: "Ojaswi Visaa",
+      // role: "Working Professional",
+      role: "",
+      content: "Perfect for anyone who wants their kids to learn classical dance or music.",
       rating: 5,
       category: "adult"
     }
@@ -130,11 +132,7 @@ const Testimonials = () => {
                 </div>
                 
                 <div className="flex items-center mb-6">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover mr-4 ring-2 ring-gray-100"
-                  />
+                  <Avatar name={testimonial.name} round={true} size="40" className="mr-2" maxInitials={2}/>
                   <div>
                     <h3 className="font-bold text-gray-900">{testimonial.name}</h3>
                     <p className="text-sm text-gray-600">{testimonial.role}</p>
