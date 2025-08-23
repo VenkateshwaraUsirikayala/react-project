@@ -2,7 +2,7 @@
 import React from 'react';
 import { Star, Quote, Users, Award, Heart, TrendingUp } from 'lucide-react';
 import Avatar from "react-avatar";
-import {CarouselProvider} from "pure-react-carousel";
+import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel.tsx";
 
 const Testimonials = () => {
   const testimonials = [
@@ -121,52 +121,112 @@ const Testimonials = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2 relative overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-coral-100 to-purple-100 rounded-bl-2xl flex items-center justify-center">
-                  <Quote className="h-6 w-6 text-coral-500" />
-                </div>
-                
-                <div className="flex items-center mb-6">
-                  <Avatar name={testimonial.name} round={true} size="40" className="mr-2" maxInitials={2}/>
-                  <div>
-                    <h3 className="font-bold text-gray-900">{testimonial.name}</h3>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
-                  </div>
-                </div>
-                
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-gold-400 fill-current" />
-                  ))}
-                </div>
-                
-                <p className="text-gray-700 leading-relaxed text-sm">
-                  "{testimonial.content}"
-                </p>
-                
-                <div className="mt-6">
-                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
-                    testimonial.category === 'parent' ? 'bg-coral-100 text-coral-700' :
-                    testimonial.category === 'adult' ? 'bg-purple-100 text-purple-700' :
-                    testimonial.category === 'teen' ? 'bg-gold-100 text-gold-700' :
-                    testimonial.category === 'professional' ? 'bg-green-100 text-green-700' :
-                    'bg-indigo-100 text-indigo-700'
-                  }`}>
-                    {testimonial.category === 'parent' ? 'Parent Review' :
-                     testimonial.category === 'adult' ? 'Adult Student' :
-                     testimonial.category === 'teen' ? 'Teen Student' :
-                     testimonial.category === 'professional' ? 'Professional' :
-                     'Organization'}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
+          {/*<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">*/}
+          {/*  {testimonials.map((testimonial, index) => (*/}
+          {/*    <div */}
+          {/*      key={index}*/}
+          {/*      className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2 relative overflow-hidden"*/}
+          {/*    >*/}
+          {/*      <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-coral-100 to-purple-100 rounded-bl-2xl flex items-center justify-center">*/}
+          {/*        <Quote className="h-6 w-6 text-coral-500" />*/}
+          {/*      </div>*/}
+          {/*      */}
+          {/*      <div className="flex items-center mb-6">*/}
+          {/*        <Avatar name={testimonial.name} round={true} size="40" className="mr-2" maxInitials={2}/>*/}
+          {/*        <div>*/}
+          {/*          <h3 className="font-bold text-gray-900">{testimonial.name}</h3>*/}
+          {/*          <p className="text-sm text-gray-600">{testimonial.role}</p>*/}
+          {/*        </div>*/}
+          {/*      </div>*/}
+          {/*      */}
+          {/*      <div className="flex mb-4">*/}
+          {/*        {[...Array(testimonial.rating)].map((_, i) => (*/}
+          {/*          <Star key={i} className="h-5 w-5 text-gold-400 fill-current" />*/}
+          {/*        ))}*/}
+          {/*      </div>*/}
+          {/*      */}
+          {/*      <p className="text-gray-700 leading-relaxed text-sm">*/}
+          {/*        "{testimonial.content}"*/}
+          {/*      </p>*/}
+          {/*      */}
+          {/*      <div className="mt-6">*/}
+          {/*        <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${*/}
+          {/*          testimonial.category === 'parent' ? 'bg-coral-100 text-coral-700' :*/}
+          {/*          testimonial.category === 'adult' ? 'bg-purple-100 text-purple-700' :*/}
+          {/*          testimonial.category === 'teen' ? 'bg-gold-100 text-gold-700' :*/}
+          {/*          testimonial.category === 'professional' ? 'bg-green-100 text-green-700' :*/}
+          {/*          'bg-indigo-100 text-indigo-700'*/}
+          {/*        }`}>*/}
+          {/*          {testimonial.category === 'parent' ? 'Parent Review' :*/}
+          {/*           testimonial.category === 'adult' ? 'Adult Student' :*/}
+          {/*           testimonial.category === 'teen' ? 'Teen Student' :*/}
+          {/*           testimonial.category === 'professional' ? 'Professional' :*/}
+          {/*           'Organization'}*/}
+          {/*        </span>*/}
+          {/*      </div>*/}
+          {/*    </div>*/}
+          {/*  ))}*/}
+          {/*</div>*/}
+
+          <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-5xl mx-auto"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {testimonials.map((testimonial, index) => (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2 relative overflow-hidden h-full">
+                      <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-coral-100 to-purple-100 rounded-bl-2xl flex items-center justify-center">
+                        <Quote className="h-6 w-6 text-coral-500" />
+                      </div>
+
+                      <div className="flex items-center mb-6">
+                        {/*<img*/}
+                        {/*    src={testimonial.image}*/}
+                        {/*    alt={testimonial.name}*/}
+                        {/*    className="w-12 h-12 rounded-full object-cover mr-4 ring-2 ring-gray-100"*/}
+                        {/*/>*/}
+                        <div>
+                          <h3 className="font-bold text-gray-900">{testimonial.name}</h3>
+                          <p className="text-sm text-gray-600">{testimonial.role}</p>
+                        </div>
+                      </div>
+
+                      <div className="flex mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star key={i} className="h-5 w-5 text-gold-400 fill-current" />
+                        ))}
+                      </div>
+
+                      <p className="text-gray-700 leading-relaxed text-sm">
+                        "{testimonial.content}"
+                      </p>
+
+                      <div className="mt-6">
+                      <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
+                          testimonial.category === 'parent' ? 'bg-coral-100 text-coral-700' :
+                              testimonial.category === 'adult' ? 'bg-purple-100 text-purple-700' :
+                                  testimonial.category === 'teen' ? 'bg-gold-100 text-gold-700' :
+                                      testimonial.category === 'professional' ? 'bg-green-100 text-green-700' :
+                                          'bg-indigo-100 text-indigo-700'
+                      }`}>
+                        {testimonial.category === 'parent' ? 'Parent Review' :
+                            testimonial.category === 'adult' ? 'Adult Student' :
+                                testimonial.category === 'teen' ? 'Teen Student' :
+                                    testimonial.category === 'professional' ? 'Professional' :
+                                        'Organization'}
+                      </span>
+                      </div>
+                    </div>
+                  </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
 
