@@ -26,7 +26,7 @@ const Testimonials = () => {
       name: "Mishika Mishra",
       // role: "Collaborating Artist",
       role: "",
-      content: "Well structured and organised  classes and the practice is almost completed during classes itself\\nAfter multiple trials of other offline and online fine arts classes we landed with Harshitha teacher and then no looking back. Though I was sceptical about online classes, Harshitha bested with her teaching style and made us learning the expert.",
+      content: "Well structured and organised  classes and the practice is almost completed during classes itself. After multiple trials of other offline and online fine arts classes we landed with Harshitha teacher and then no looking back. Though I was sceptical about online classes, Harshitha bested with her teaching style and made us learning the expert.",
       rating: 5,
       category: "professional"
     },
