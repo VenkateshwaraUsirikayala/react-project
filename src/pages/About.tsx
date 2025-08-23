@@ -5,15 +5,21 @@ import { Award, Music, Users, Heart, Star, Calendar } from 'lucide-react';
 const About = () => {
   const achievements = [
     {
-      year: "2018",
+      year: "2020",
       title: "Started Teaching Journey",
       description: "Began my career as a dance and vocal instructor",
       icon: Calendar
     },
     {
-      year: "2017",
-      title: "First Major Performance",
-      description: "Lead performer at the Cultural Arts Festival",
+      year: "2021",
+      title: "Showcasing Bharatanatyam Culture Globally",
+      description: "Experienced in teaching students globally, delivering quality education across diverse cultures and backgrounds.",
+      icon: Star
+    },
+    {
+      year: "2022",
+      title: "Empowering Students Through Certifications",
+      description: "Students successfully attended and completed their certification programs, strengthening their academic and professional journey.",
       icon: Star
     },
     {
@@ -27,6 +33,12 @@ const About = () => {
       title: "Advanced Certified Bharatanatyam Teacher",
       description: "Trained and certified in Advanced Bharatanatyam at Gangubai Hangal University,Mysore., upholding the cultural heritage and spiritual depth of this classical art form",
       icon: Music
+    },
+    {
+      year: "2025",
+      title: "International Conference on Indian Fine Arts",
+      description: "Nattuvangam workshop under the guidance of Dr. A. Sumathi Sundar. \n Master class under the guidance of Dr. Swarnamalya and Jayashree Narayanan",
+      icon: Users
     },
     {
       year: "2025",
@@ -104,7 +116,7 @@ const About = () => {
                   Dance Journey
                 </h3>
                 <p>
-                  I began my formal training in Bharatanatyam under the guidance of renowned Guru Smt. Chitra Aravind. The discipline, grace, and storytelling aspect of this classical dance form became the foundation of my artistic expression.
+                  I began my formal training in Bharatanatyam disciplined of renowned Guru Smt. Chitra Aravind, Smt. Aparna Vasudevan and Smt. Ramya. The discipline, grace, and storytelling aspect of this classical dance form became the foundation of my artistic expression.
                 </p>
               </div>
 
@@ -176,7 +188,7 @@ const About = () => {
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {achievement.title}
                     </h3>
-                    <p className="text-gray-600">{achievement.description}</p>
+                    <p className="text-gray-600 whitespace-pre-line">{achievement.description}</p>
                   </div>
                 </div>
 
@@ -188,39 +200,39 @@ const About = () => {
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              My Expertise
-            </h2>
-            <p className="text-xl text-gray-600">
-              Years of training and performance experience
-            </p>
-          </div>
+      {/*<section className="py-20 bg-white">*/}
+      {/*  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">*/}
+      {/*    <div className="text-center mb-16">*/}
+      {/*      <h2 className="text-4xl font-bold text-gray-900 mb-4">*/}
+      {/*        My Expertise*/}
+      {/*      </h2>*/}
+      {/*      <p className="text-xl text-gray-600">*/}
+      {/*        Years of training and performance experience*/}
+      {/*      </p>*/}
+      {/*    </div>*/}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {skills.map((skill, index) => (
-              <div key={index} className="mb-6">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-lg font-semibold text-gray-900">
-                    {skill.name}
-                  </span>
-                  <span className="text-sm font-medium text-gray-600">
-                    {skill.level}%
-                  </span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-3">
-                  <div
-                    className="bg-gradient-to-r from-coral-500 to-purple-600 h-3 rounded-full transition-all duration-1000 ease-out"
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/*    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">*/}
+      {/*      {skills.map((skill, index) => (*/}
+      {/*        <div key={index} className="mb-6">*/}
+      {/*          <div className="flex justify-between items-center mb-2">*/}
+      {/*            <span className="text-lg font-semibold text-gray-900">*/}
+      {/*              {skill.name}*/}
+      {/*            </span>*/}
+      {/*            <span className="text-sm font-medium text-gray-600">*/}
+      {/*              {skill.level}%*/}
+      {/*            </span>*/}
+      {/*          </div>*/}
+      {/*          <div className="w-full bg-gray-200 rounded-full h-3">*/}
+      {/*            <div*/}
+      {/*              className="bg-gradient-to-r from-coral-500 to-purple-600 h-3 rounded-full transition-all duration-1000 ease-out"*/}
+      {/*              style={{ width: `${skill.level}%` }}*/}
+      {/*            ></div>*/}
+      {/*          </div>*/}
+      {/*        </div>*/}
+      {/*      ))}*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
     </div>
   );
 };

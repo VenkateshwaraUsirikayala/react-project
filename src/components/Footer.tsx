@@ -27,7 +27,7 @@ const Footer = () => {
             <div className="space-y-2">
               <a href="/about" className="block text-purple-200 hover:text-white transition-colors duration-300">About Me</a>
               <a href="/portfolio" className="block text-purple-200 hover:text-white transition-colors duration-300">Portfolio</a>
-              <a href="/services" className="block text-purple-200 hover:text-white transition-colors duration-300">Services & Pricing</a>
+              {/*<a href="/services" className="block text-purple-200 hover:text-white transition-colors duration-300">Services & Pricing</a>*/}
               <a href="/contact" className="block text-purple-200 hover:text-white transition-colors duration-300">Book a Class</a>
             </div>
           </div>

@@ -85,7 +85,7 @@ const Testimonials = () => {
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="h-6 w-6 text-gold-400 fill-current" />
             ))}
-            <span className="ml-3 text-lg font-semibold text-gray-700">5.0 Average Rating</span>
+            <span className="ml-3 text-lg font-semibold text-gray-700">4.8 Average Rating</span>
           </div>
         </div>
       </section>
