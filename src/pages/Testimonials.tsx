@@ -18,7 +18,7 @@ const Testimonials = () => {
       name: "Snehal Patil",
       // role: "Adult Vocal Student",
       role: "",
-      content: "I have enjoyed learning Bharatnatyam Adavus and Taalam as well as a song within first few months. I like how Harshitha Ma'am wants us to perfect each step with eyes, neck and hip movements.\\nIt's great that Harshitha Ma'am makes up for the missed classes.",
+      content: "I have enjoyed learning Bharatnatyam Adavus and Taalam as well as a song within first few months. I like how Harshitha Ma'am wants us to perfect each step with eyes, neck and hip movements. It's great that Harshitha Ma'am makes up for the missed classes.",
       rating: 4,
       category: "adult"
     },
