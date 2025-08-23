@@ -7,12 +7,20 @@ import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious}
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Kajal Patil",
+      name: "Seerat Barot",
       // role: "Parent of 8-year-old student",
       role: "",
-      content: "I love attending Bharatnatyam classes offered by Ms. Harshitha. She is highly flexible and very thorough with her teachings. I joined her classes at the age of 37 and for the last 3 years I have acquired strength, flexibility and overall increased stamina. I am honored to be a student of Ms. Harshitha and thankful for her passion & dedication towards the students.",
+      content: "I am thankful to Harshita madam for the bharatnatyam  online class. She pays attention to all kids online. Batches are small. She is very regular in her classes, compensates for the classes missed by the child.",
       rating: 5,
       category: "parent"
+    },
+    {
+      name: "Kajal Patil",
+      // role: "Adult Vocal Student",
+      role: "",
+      content: "I love attending Bharatnatyam classes offered by Ms. Harshitha. She is highly flexible and very thorough with her teachings. I joined her classes at the age of 37 and for the last 3 years I have acquired strength, flexibility and overall increased stamina. I am honored to be a student of Ms. Harshitha and thankful for her passion & dedication towards the students.",
+      rating: 4,
+      category: "adult"
     },
     {
       name: "Snehal Patil",
@@ -23,34 +31,60 @@ const Testimonials = () => {
       category: "adult"
     },
     {
-      name: "Mishika Mishra",
+      name: "Aadvita Singh",
       // role: "Collaborating Artist",
       role: "",
-      content: "Well structured and organised  classes and the practice is almost completed during classes itself. After multiple trials of other offline and online fine arts classes we landed with Harshitha teacher and then no looking back. Though I was sceptical about online classes, Harshitha bested with her teaching style and made us learning the expert.",
+      content: "Harshita is a very good soft spoken patiently teaching dance and music teacher..she teaches with so much love and affection that small kids also learn very fast .It is her hard-work that my 5year old daughter has passed her pre-grade and now she is in grade 1..she is a blessing for all those working mothers who don't have the time to take their child for offline classes",
       rating: 5,
       category: "professional"
     },
     {
-      name: "Ch.Varnica",
+      name: "Mishika Mishra",
       // role: "Teen Dance Student",
       role: "",
-      content: "My daughter have been learning from Harshitha mam since one and half years and I'm constantly impressed by her dedication .She creates a fun and supportive atmosphere.",
+      content: "Thank you for your patience, dedication, and the way you make each session engaging and meaningful. Mishika is really enjoying the classes and looks forward to them every week. We truly appreciate the way you focus on both technique and expression, it’s helping her grow not just as a dancer, but also in confidence.",
       rating: 5,
       category: "teen"
     },
     {
-      name: "Shanaya Singh",
+      name: "Swapna Vemula",
       // role: "Event Organizer",
+      role: "",
+      content: "Well structured and organised  classes and the practice is almost completed during classes itself. After multiple trials of other offline and online fine arts classes we landed with Harshitha teacher and then no looking back. Though I was sceptical about online classes, Harshitha bested with her teaching style and made us learning the expert.",
+      rating: 5,
+      category: "organization"
+    },
+    {
+      name: "Ch.Varnica",
+      // role: "Working Professional",
+      role: "",
+      content: "My daughter have been learning from Harshitha mam since one and half years and I'm constantly impressed by her dedication .She creates a fun and supportive atmosphere.",
+      rating: 5,
+      category: "adult"
+    },
+    {
+      name: "Shanaya Singh",
+      // role: "Working Professional",
       role: "",
       content: "Thank you so much for teaching us with so much love and patience. I really enjoy every class and love learning Bharatanatyam from you. Your way of explaining each step and expression makes it easy to understand and so much fun",
       rating: 5,
-      category: "organization"
+      category: "adult"
     },
     {
       name: "Ojaswi Visaa",
       // role: "Working Professional",
       role: "",
       content: "Perfect for anyone who wants their kids to learn classical dance or music.",
+      rating: 5,
+      category: "adult"
+    },
+    {
+      name: "Anwita Minocha",
+      // role: "Working Professional",
+      role: "",
+      content: "The best part about any learning process is the teacher who is there with you taking pains, making sure their disciple are intune.\n" +
+          "Ms. Harshitha ensures that each student not only learns the steps but understands the cultural and spiritual essence of the dance. Her passion is truly infectious, and it inspires everyone in the class to give their best. \n" +
+          "I couldn't have asked for a better GURU",
       rating: 5,
       category: "adult"
     }
@@ -80,7 +114,7 @@ const Testimonials = () => {
             <span className="bg-gradient-to-r from-coral-500 to-purple-600 bg-clip-text text-transparent">Student Stories</span>
           </h1>
           <p className="text-xl text-gray-700 leading-relaxed mb-8">
-            The joy and transformation of my students is what drives my passion for teaching. 
+            The joy and transformation of my students is what drives my passion for teaching.
             Here are some heartwarming testimonials from the amazing people I've had the privilege to work with.
           </p>
           <div className="flex justify-center items-center space-x-2">
@@ -120,7 +154,7 @@ const Testimonials = () => {
               Real experiences from real students and their families
             </p>
           </div>
-          
+
           {/*<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">*/}
           {/*  {testimonials.map((testimonial, index) => (*/}
           {/*    <div */}
@@ -189,6 +223,7 @@ const Testimonials = () => {
                         {/*    alt={testimonial.name}*/}
                         {/*    className="w-12 h-12 rounded-full object-cover mr-4 ring-2 ring-gray-100"*/}
                         {/*/>*/}
+                          <Avatar name={testimonial.name} round={true} maxInitials={2} size={"40"} className="mr-2 mb-1"/>
                         <div>
                           <h3 className="font-bold text-gray-900">{testimonial.name}</h3>
                           <p className="text-sm text-gray-600">{testimonial.role}</p>
@@ -239,10 +274,10 @@ const Testimonials = () => {
               Awards and recognition that validate my commitment to excellence
             </p>
           </div>
-          
+
           <div className="space-y-4">
             {achievements.map((achievement, index) => (
-              <div 
+              <div
                 key={index}
                 className="flex items-center space-x-4 p-6 bg-gradient-to-r from-coral-50 to-purple-50 rounded-xl hover:shadow-lg transition-shadow duration-300"
               >
@@ -265,10 +300,10 @@ const Testimonials = () => {
               Hear directly from my students about their journey
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3].map((video, index) => (
-              <div 
+              <div
                 key={index}
                 className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-white/20 transition-colors duration-300 cursor-pointer"
               >
@@ -292,10 +327,10 @@ const Testimonials = () => {
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Be the Next Success Story</h2>
           <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-            Join hundreds of students who have discovered their artistic potential. 
+            Join hundreds of students who have discovered their artistic potential.
             Your transformation story could be featured here next!
           </p>
-          <a 
+          <a
             href="/contact"
             className="inline-flex items-center space-x-2 bg-gradient-to-r from-coral-500 to-purple-600 text-white px-10 py-5 rounded-full font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
           >
