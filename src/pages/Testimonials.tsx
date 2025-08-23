@@ -5,92 +5,110 @@ import Avatar from "react-avatar";
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel.tsx";
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      name: "Seerat Barot",
-      // role: "Parent of 8-year-old student",
-      role: "",
-      content: "I am thankful to Harshita madam for the bharatnatyam  online class. She pays attention to all kids online. Batches are small. She is very regular in her classes, compensates for the classes missed by the child.",
-      rating: 5,
-      category: "parent",
-      state: "Maharashtra",
-      country: 'India'
-    },
-    {
-      name: "Kajal Patil",
-      // role: "Adult Vocal Student",
-      role: "",
-      content: "I love attending Bharatnatyam classes offered by Ms. Harshitha. She is highly flexible and very thorough with her teachings. I joined her classes at the age of 37 and for the last 3 years I have acquired strength, flexibility and overall increased stamina. I am honored to be a student of Ms. Harshitha and thankful for her passion & dedication towards the students.",
-      rating: 4,
-      category: "adult"
-    },
-    {
-      name: "Snehal Patil",
-      // role: "Adult Vocal Student",
-      role: "",
-      content: "I have enjoyed learning Bharatnatyam Adavus and Taalam as well as a song within first few months. I like how Harshitha Ma'am wants us to perfect each step with eyes, neck and hip movements. It's great that Harshitha Ma'am makes up for the missed classes.",
-      rating: 4,
-      category: "adult"
-    },
-    {
-      name: "Aadvita Singh",
-      // role: "Collaborating Artist",
-      role: "",
-      content: "Harshita is a very good soft spoken patiently teaching dance and music teacher..she teaches with so much love and affection that small kids also learn very fast .It is her hard-work that my 5year old daughter has passed her pre-grade and now she is in grade 1..she is a blessing for all those working mothers who don't have the time to take their child for offline classes",
-      rating: 5,
-      category: "professional"
-    },
-    {
-      name: "Mishika Mishra",
-      // role: "Teen Dance Student",
-      role: "",
-      content: "Thank you for your patience, dedication, and the way you make each session engaging and meaningful. Mishika is really enjoying the classes and looks forward to them every week. We truly appreciate the way you focus on both technique and expression, it’s helping her grow not just as a dancer, but also in confidence.",
-      rating: 5,
-      category: "teen"
-    },
-    {
-      name: "Swapna Vemula",
-      // role: "Event Organizer",
-      role: "",
-      content: "Well structured and organised  classes and the practice is almost completed during classes itself. After multiple trials of other offline and online fine arts classes we landed with Harshitha teacher and then no looking back. Though I was sceptical about online classes, Harshitha bested with her teaching style and made us learning the expert.",
-      rating: 5,
-      category: "organization"
-    },
-    {
-      name: "Ch.Varnica",
-      // role: "Working Professional",
-      role: "",
-      content: "My daughter have been learning from Harshitha mam since one and half years and I'm constantly impressed by her dedication .She creates a fun and supportive atmosphere.",
-      rating: 5,
-      category: "adult"
-    },
-    {
-      name: "Shanaya Singh",
-      // role: "Working Professional",
-      role: "",
-      content: "Thank you so much for teaching us with so much love and patience. I really enjoy every class and love learning Bharatanatyam from you. Your way of explaining each step and expression makes it easy to understand and so much fun",
-      rating: 5,
-      category: "adult"
-    },
-    {
-      name: "Ojaswi Visaa",
-      // role: "Working Professional",
-      role: "",
-      content: "Perfect for anyone who wants their kids to learn classical dance or music.",
-      rating: 5,
-      category: "adult"
-    },
-    {
-      name: "Anwita Minocha",
-      // role: "Working Professional",
-      role: "",
-      content: "The best part about any learning process is the teacher who is there with you taking pains, making sure their disciple are intune.\n" +
-          "Ms. Harshitha ensures that each student not only learns the steps but understands the cultural and spiritual essence of the dance. Her passion is truly infectious, and it inspires everyone in the class to give their best. \n" +
-          "I couldn't have asked for a better GURU",
-      rating: 5,
-      category: "adult"
-    }
-  ];
+    const testimonials = [
+        {
+            name: "Seerat Barot",
+            role: "Parent of 7-year-old student",
+            // role: "",
+            content: "I am thankful to Harshita madam for the bharatnatyam  online class. She pays attention to all kids online. Batches are small. She is very regular in her classes, compensates for the classes missed by the child.",
+            rating: 5,
+            category: "parent",
+            state: "Maharashtra",
+            country: "India"
+        },
+        {
+            name: "Kajal Patil",
+            role: "Adult Bharatanatyam Student",
+            // role: "",
+            content: "I love attending Bharatnatyam classes offered by Ms. Harshitha. She is highly flexible and very thorough with her teachings. I joined her classes at the age of 37 and for the last 3 years I have acquired strength, flexibility and overall increased stamina. I am honored to be a student of Ms. Harshitha and thankful for her passion & dedication towards the students.",
+            rating: 4,
+            category: "adult",
+            state: "California",
+            country: "USA"
+        },
+        {
+            name: "Snehal Patil",
+            role: "Adult Bharatanatyam Student",
+            // role: "",
+            content: "I have enjoyed learning Bharatnatyam Adavus and Taalam as well as a song within first few months. I like how Harshitha Ma'am wants us to perfect each step with eyes, neck and hip movements. It's great that Harshitha Ma'am makes up for the missed classes.",
+            rating: 4,
+            category: "adult",
+            state: "Ohio",
+            country: "USA"
+        },
+        {
+            name: "Aadvita Singh",
+            role: "Parent of 5-year-old student",
+            // role: "",
+            content: "Harshita is a very good soft spoken patiently teaching dance and music teacher..she teaches with so much love and affection that small kids also learn very fast .It is her hard-work that my 5year old daughter has passed her pre-grade and now she is in grade 1..she is a blessing for all those working mothers who don't have the time to take their child for offline classes",
+            rating: 5,
+            category: "professional",
+            state: "Uttar Pradesh",
+            country: "India"
+        },
+        {
+            name: "Mishika Mishra",
+            role: "Parent of 5-year-old student",
+            // role: "",
+            content: "Thank you for your patience, dedication, and the way you make each session engaging and meaningful. Mishika is really enjoying the classes and looks forward to them every week. We truly appreciate the way you focus on both technique and expression, it’s helping her grow not just as a dancer, but also in confidence.",
+            rating: 5,
+            category: "teen",
+            state: "Bangalore",
+            country: "India"
+        },
+        {
+            name: "Swapna Vemula",
+            role: "Adult Bharatanatyam Student",
+            // role: "",
+            content: "Well structured and organised  classes and the practice is almost completed during classes itself. After multiple trials of other offline and online fine arts classes we landed with Harshitha teacher and then no looking back. Though I was sceptical about online classes, Harshitha bested with her teaching style and made us learning the expert.",
+            rating: 5,
+            category: "organization",
+            state: "Bangalore",
+            country: "India"
+        },
+        {
+            name: "Ch.Varnica",
+            role: "Parent of 8-year-old student",
+            // role: "",
+            content: "My daughter have been learning from Harshitha mam since one and half years and I'm constantly impressed by her dedication .She creates a fun and supportive atmosphere.",
+            rating: 5,
+            category: "adult",
+            state: "Dammam",
+            country: "Saudi Arabia"
+        },
+        {
+            name: "Shanaya Singh",
+            role: "Parent of 9-year-old student",
+            // role: "",
+            content: "Thank you so much for teaching us with so much love and patience. I really enjoy every class and love learning Bharatanatyam from you. Your way of explaining each step and expression makes it easy to understand and so much fun",
+            rating: 5,
+            category: "adult",
+            state: '',
+            country: 'Singapore'
+        },
+        {
+            name: "Ojaswi Visaa",
+            role: "Parent of 6-year-old student",
+            // role: "",
+            content: "Perfect for anyone who wants their kids to learn classical dance or music.",
+            rating: 5,
+            category: "adult",
+            state: 'Metromanila',
+            country: 'Phillipines'
+        },
+        {
+            name: "Anwita Minocha",
+            role: "Parent of 7-year-old student",
+            // role: "",
+            content: "The best part about any learning process is the teacher who is there with you taking pains, making sure their disciple are intune.\n" +
+                "Ms. Harshitha ensures that each student not only learns the steps but understands the cultural and spiritual essence of the dance. Her passion is truly infectious, and it inspires everyone in the class to give their best. \n" +
+                "I couldn't have asked for a better GURU",
+            rating: 5,
+            category: "parent",
+            state: "New Delhi",
+            country: "India",
+        }
+    ];
 
   const stats = [
     { number: "500+", label: "Happy Students", icon: Users, color: "from-coral-500 to-pink-500" },
@@ -243,35 +261,9 @@ const Testimonials = () => {
                       </p>
 
                       <div className="mt-6">
-                      <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
-                          testimonial.category === 'parent' ? 'bg-coral-100 text-coral-700' :
-                              testimonial.category === 'adult' ? 'bg-purple-100 text-purple-700' :
-                                  testimonial.category === 'teen' ? 'bg-gold-100 text-gold-700' :
-                                      testimonial.category === 'professional' ? 'bg-green-100 text-green-700' :
-                                          'bg-indigo-100 text-indigo-700'
-                      }`}>
-                        {testimonial.category === 'parent' ? 'Parent Review' :
-                            testimonial.category === 'adult' ? 'Adult Student' :
-                                testimonial.category === 'teen' ? 'Teen Student' :
-                                    testimonial.category === 'professional' ? 'Professional' :
-                                        'Organization'}
-                      </span>
-                      </div>
-
-                      <div className="mt-6">
-                      <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
-                          testimonial.country === 'India' ? 'bg-coral-100 text-coral-700' :
-                              testimonial.category === 'adult' ? 'bg-purple-100 text-purple-700' :
-                                  testimonial.category === 'teen' ? 'bg-gold-100 text-gold-700' :
-                                      testimonial.category === 'professional' ? 'bg-green-100 text-green-700' :
-                                          'bg-indigo-100 text-indigo-700'
-                      }`}>
-                        {testimonial.country === 'India' ? testimonial.state+", "+ testimonial.country:
-                            testimonial.category === 'adult' ? 'Adult Student' :
-                                testimonial.category === 'teen' ? 'Teen Student' :
-                                    testimonial.category === 'professional' ? 'Professional' :
-                                        'Organization'}
-                      </span>
+                          <span className="`inline-block px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-700'">
+                              {testimonial.state !== ''? testimonial.state +", "+ testimonial.country : testimonial.country}
+                          </span>
                       </div>
                     </div>
                   </CarouselItem>
