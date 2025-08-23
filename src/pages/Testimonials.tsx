@@ -57,16 +57,16 @@ const Testimonials = () => {
   const stats = [
     { number: "500+", label: "Happy Students", icon: Users, color: "from-coral-500 to-pink-500" },
     { number: "98%", label: "Student Satisfaction", icon: Heart, color: "from-purple-500 to-indigo-500" },
-    { number: "8+", label: "Years Teaching", icon: Award, color: "from-gold-500 to-yellow-500" },
+    { number: "5+", label: "Years Teaching", icon: Award, color: "from-gold-500 to-yellow-500" },
     { number: "95%", label: "Skill Improvement", icon: TrendingUp, color: "from-green-500 to-emerald-500" }
   ];
 
   const achievements = [
-    "Best Dance Instructor Award 2023 - Mumbai Cultural Center",
-    "Featured in 'Teaching Excellence' magazine",
-    "Invited as guest judge for state-level competitions",
-    "500+ successful student performances",
-    "Recognized by Indian Classical Dance Association"
+    "Best Dance Instructor Award 2024 - National Level Dance Guru",
+    "Invited as guest judge for VIBGYOR Group of Schools competitions",
+    "Recognized by Chennai Bridge Academy and Mysore Gangubai Hangal University",
+    "500+ successful students trained",
+
   ];
 
   return (
@@ -75,7 +75,7 @@ const Testimonials = () => {
       <section className="py-20 bg-gradient-to-br from-coral-50 via-purple-50 to-gold-50">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Student <span className="bg-gradient-to-r from-coral-500 to-purple-600 bg-clip-text text-transparent">Stories</span>
+            <span className="bg-gradient-to-r from-coral-500 to-purple-600 bg-clip-text text-transparent">Student Stories</span>
           </h1>
           <p className="text-xl text-gray-700 leading-relaxed mb-8">
             The joy and transformation of my students is what drives my passion for teaching. 

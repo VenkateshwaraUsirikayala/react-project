@@ -14,7 +14,7 @@ const About = () => {
       year: "2021",
       title: "Showcasing Bharatanatyam Culture Globally",
       description: "Experienced in teaching students globally, delivering quality education across diverse cultures and backgrounds.",
-      icon: Star
+      icon: Calendar
     },
     {
       year: "2022",
@@ -32,7 +32,7 @@ const About = () => {
       year: "2024",
       title: "Advanced Certified Bharatanatyam Teacher",
       description: "Trained and certified in Advanced Bharatanatyam at Gangubai Hangal University,Mysore., upholding the cultural heritage and spiritual depth of this classical art form",
-      icon: Music
+      icon: Award
     },
     {
       year: "2025",

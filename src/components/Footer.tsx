@@ -66,7 +66,7 @@ const Footer = () => {
 
         <div className="border-t border-purple-700 mt-8 pt-8 text-center">
           <p className="text-purple-300 text-sm">
-            © 2024 Bhavanjali. All rights reserved. Made with ❤️ for the love of
+            © 2025 Bhavanjali. All rights reserved. Made with ❤️ for the love of
             dance and music.
           </p>
         </div>

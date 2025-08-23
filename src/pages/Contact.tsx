@@ -61,7 +61,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: "Hours",
-      content: "Mon-Sat: 8AM-8PM",
+      content: "Mon-Sun: 8AM-8PM",
       description: "Sunday by appointment",
       color: "from-green-500 to-emerald-500",
     },
@@ -84,7 +84,7 @@ const Contact = () => {
     {
       icon: Facebook,
       platform: "Facebook",
-      handle: "Artistic Soul Academy",
+      handle: "bharthanatyam_carnatic_music",
       color: "hover:text-blue-600",
     },
     {
@@ -110,12 +110,13 @@ const Contact = () => {
       question: "Do I need any prior experience?",
       answer:
         "Absolutely not! I have students ranging from complete beginners to advanced performers. Everyone starts somewhere.",
-    },
-    {
-      question: "What should I wear to dance classes?",
-      answer:
-        "Comfortable, stretchy clothing that allows free movement. For Bharatanatyam, traditional practice wear is preferred but not mandatory for beginners.",
-    },
+    }
+    // ,
+    // {
+    //   question: "What should I wear to dance classes?",
+    //   answer:
+    //     "Comfortable, stretchy clothing that allows free movement. For Bharatanatyam, traditional practice wear is preferred but not mandatory for beginners.",
+    // },
   ];
 
   return (
@@ -227,16 +228,17 @@ const Contact = () => {
                       htmlFor="phone"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Phone Number
+                      Phone Number *
                     </label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
+                      required
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-coral-500 focus:border-coral-500 transition-colors duration-300"
-                      placeholder="+91 91136 94811"
+                      placeholder="+91 12345 67890"
                     />
                   </div>
                   <div>
@@ -255,18 +257,11 @@ const Contact = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-coral-500 focus:border-coral-500 transition-colors duration-300"
                     >
                       <option value="">Select a service</option>
-                      <option value="vocal-coaching">
-                        One-on-One Vocal Coaching
-                      </option>
-                      <option value="group-dance">Weekly Group Dance</option>
-                      <option value="combo-pass">10-Class Combo Pass</option>
-                      <option value="performance-prep">
-                        Performance Preparation
-                      </option>
-                      <option value="online">Online Classes</option>
-                      <option value="other">
-                        Other (please specify in message)
-                      </option>
+                      <option value="Bharatanatyam">Bharatanatyam</option>
+                      <option value="carnatic-vocal">Carnatic Vocal</option>
+                      <option value="performance-prepartion">Performance Preparation</option>
+                      <option value="semi-classical">Semi Classical</option>
+                      <option value="others">Other (please specify in message)</option>
                     </select>
                   </div>
                 </div>
