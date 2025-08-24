@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {ArrowRight, Star, Users, Calendar, Award, ShieldCheck, Handshake} from 'lucide-react';
+import {ArrowRight, Star, Users, Calendar, Award, ShieldCheck, Handshake, ExternalLink} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import {Analytics} from "@vercel/analytics/next";
 
@@ -68,19 +68,19 @@ const Home = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in delay-700">
-            <Link 
-              to="/contact"
+            <a
+              href="/contact"
               className="group bg-gradient-to-r from-coral-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-2"
             >
               <span>Book Your First Demo</span>
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
-            <Link 
-              to="/portfolio"
+            </a>
+            <a
+              href="/portfolio"
               className="group bg-white text-gray-800 px-8 py-4 rounded-full font-semibold text-lg border-2 border-gray-200 hover:border-coral-500 hover:shadow-xl transition-all duration-300"
             >
               View My Work
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -145,13 +145,22 @@ const Home = () => {
             Whether you're a complete beginner or looking to refine your skills, I'm here to guide you every step of the way. 
             Let's unlock your potential together.
           </p>
-          <Link 
-            to="/contact"
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-coral-500 to-purple-600 text-white px-10 py-5 rounded-full font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+
+          <a
+          href="/contact"
+          className="inline-flex items-center space-x-2 bg-gradient-to-r from-coral-500 to-purple-600 text-white px-10 py-5 rounded-full font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
           >
-            <span>Start Your Journey Today</span>
+          <span>Start Your Journey Today</span>
             <ArrowRight className="h-5 w-5" />
-          </Link>
+        </a>
+
+          {/*<Link */}
+          {/*  to="/contact"*/}
+          {/*  className="inline-flex items-center space-x-2 bg-gradient-to-r from-coral-500 to-purple-600 text-white px-10 py-5 rounded-full font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"*/}
+          {/*>*/}
+          {/*  <span>Start Your Journey Today</span>*/}
+          {/*  <ArrowRight className="h-5 w-5" />*/}
+          {/*</Link>*/}
         </div>
       </section>
     </div>
