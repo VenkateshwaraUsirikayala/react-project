@@ -49,7 +49,7 @@ const Home = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8 animate-fade-in">
             <img 
-              src="Home Icon2.png"
+              src="https://ik.imagekit.io/6sx6t35ks/Home%20Icon2.png?updatedAt=1756013850101"
               alt="Dance and Singing Coach"
               className="w-32 h-32 rounded-full mx-auto mb-6 shadow-2xl ring-4 ring-white/50 hover:scale-105 transition-transform duration-500"
             />

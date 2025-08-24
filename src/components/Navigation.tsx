@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Music, Music2 } from 'lucide-react';
+import {Menu, X, Music, Music2, Frown} from 'lucide-react';
+import SearchIcon from "@/components/SearchIcon.tsx";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,8 +25,10 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
             <div className="flex items-center space-x-1">
-              <Music2 className="h-6 w-6 text-coral-500 group-hover:rotate-12 transition-transform duration-300" />
-              <Music className="h-6 w-6 text-purple-600 group-hover:scale-110 transition-transform duration-300" />
+              <SearchIcon />
+              <Music2 className="h-6 w-6 text-purple-600 group-hover:rotate-12 transition-transform duration-300" />
+              {/*<Music className="h-6 w-6 text-purple-600 group-hover:scale-110 transition-transform duration-300" />*/}
+              {/*<Frown className="h-6 w-6 text-purple-600 group-hover:scale-110 transition-transform duration-300"/>*/}
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-coral-500 to-purple-600 bg-clip-text text-transparent">
               Bhavanjali

@@ -63,9 +63,8 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <h1 className="text-5xl font-bold text-gray-900 mb-6">
-                My{" "}
                 <span className="bg-gradient-to-r from-coral-500 to-purple-600 bg-clip-text text-transparent">
-                  Artistic Story
+                  My Artistic Story
                 </span>
               </h1>
               <p className="text-xl text-gray-700 leading-relaxed mb-6">
