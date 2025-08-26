@@ -30,7 +30,7 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-    const response = await fetch('http://localhost:8080/contact-submit', {
+    const response = await fetch('http://54.208.167.238:8080/contact-submit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
