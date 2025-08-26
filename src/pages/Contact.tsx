@@ -30,7 +30,7 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-    const response = await fetch('http://54.208.167.238:8080/contact-submit', {
+    const response = await fetch('https://appplicationloadbalancer-74626486.us-east-1.elb.amazonaws.com/contact-submit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
