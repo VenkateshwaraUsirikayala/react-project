@@ -1,16 +1,21 @@
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, MessageCircle, Instagram, Youtube, Facebook } from 'lucide-react';
+import {Mail, Phone, MapPin, Clock, Send, MessageCircle, Instagram, Youtube, Facebook, Loader2} from 'lucide-react';
+import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog.tsx";
+import {useToast} from "@/components/ui/use-toast.ts";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    serviceType: '',
-    message: '',
-    preferredTime: ''
-  });
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        serviceType: '',
+        message: '',
+        preferredTime: ''
+    });
+    const [isLoading, setIsLoading] = useState(false);
+    const [showSuccessDialog, setShowSuccessDialog] = useState(false);
+    const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -20,12 +25,32 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // For now, just log the form data
-    console.log('Form submitted:', formData);
-    // Here you would typically send the data to your backend
-    alert('Thank you for your inquiry! I will get back to you within 24 hours.');
+    setIsLoading(true);
+
+    try {
+    const response = await fetch('http://localhost:8080/contact-submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        serviceType: formData.serviceType,
+        message: formData.message,
+        preferredTime: formData.preferredTime,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.error || 'Failed to submit message');
+    }
+
     setFormData({
       name: '',
       email: '',
@@ -34,6 +59,18 @@ const Contact = () => {
       message: '',
       preferredTime: ''
     });
+            setShowSuccessDialog(true);
+
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            toast({
+                title: "Error",
+                description: error instanceof Error ? error.message : "There was a problem submitting your message. Please try again.",
+                variant: "destructive",
+            });
+        } finally {
+            setIsLoading(false);
+        }
   };
 
   const contactInfo = [
@@ -42,28 +79,28 @@ const Contact = () => {
       title: "Email",
       content: "contact@bhavanjali.art",
       description: "I respond within 24 hours",
-      color: "from-coral-500 to-pink-500",
+      color: "from-coral-500 to-pink-500"
     },
     {
       icon: Phone,
       title: "Phone",
       content: "+91 91136 94811",
       description: "Call or WhatsApp anytime",
-      color: "from-purple-500 to-indigo-500",
+      color: "from-purple-500 to-indigo-500"
     },
     {
       icon: MapPin,
       title: "Location",
       content: "Bangalore",
       description: "Online classes",
-      color: "from-gold-500 to-yellow-500",
+      color: "from-gold-500 to-yellow-500"
     },
     {
       icon: Clock,
       title: "Hours",
       content: "Mon-Sun: 8AM-8PM",
       description: "Sunday by appointment",
-      color: "from-green-500 to-emerald-500",
+      color: "from-green-500 to-emerald-500"
     },
   ];
 
@@ -233,7 +270,6 @@ const Contact = () => {
                       type="tel"
                       id="phone"
                       name="phone"
-                      required
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-coral-500 focus:border-coral-500 transition-colors duration-300"
@@ -303,17 +339,23 @@ const Contact = () => {
                 </div>
 
                 <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-coral-500 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
+                    type="submit"
+                    disabled={isLoading}
+                    className="w-full bg-gradient-to-r from-coral-500 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
-                  <Send className="h-5 w-5" />
-                  <span>Send Message</span>
+                  {isLoading ? (
+                      <Loader2 className="h-5 w-5 animate-spin"/>
+                  ) : (
+                      <Send className="h-5 w-5"/>
+                  )}
+                  <span>{isLoading ? 'Sending...' : 'Send Message'}</span>
                 </button>
               </form>
             </div>
 
             {/* Additional Info & Social */}
             <div className="space-y-8">
+
               {/* Quick Response Promise */}
               <div className="bg-gradient-to-r from-coral-500 to-purple-600 text-white p-8 rounded-2xl">
                 <h3 className="text-2xl font-bold mb-4">
@@ -364,6 +406,7 @@ const Contact = () => {
                   ))}
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -408,6 +451,27 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      <Dialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-center text-2xl font-bold text-green-600">
+              Message Sent Successfully!
+            </DialogTitle>
+            <DialogDescription className="text-center space-y-3 pt-4">
+              <div className="text-lg">Thank you for reaching out!</div>
+              <div className="text-gray-600">
+                I've received your message and will get back to you within 24 hours.
+                Your artistic journey is important to me!
+              </div>
+              <div className="flex items-center justify-center space-x-2 pt-2">
+                <Clock className="h-4 w-4 text-coral-500" />
+                <span className="text-sm font-medium text-coral-600">Response time: &lt; 24 hours</span>
+              </div>
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
 
       {/* Map/Location Section (Placeholder) */}
       {/* <section className="py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
