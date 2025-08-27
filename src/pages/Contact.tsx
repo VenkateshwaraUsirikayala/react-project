@@ -34,6 +34,7 @@ const Contact = () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Allow-Credentials' : 'true'
       },
       body: JSON.stringify({
         name: formData.name,
