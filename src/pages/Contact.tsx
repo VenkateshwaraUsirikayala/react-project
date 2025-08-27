@@ -30,7 +30,7 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-    const response = await fetch('http://api.bhavanjali.art/contact-submit', {
+    const response = await fetch('https://api.bhavanjali.art/contact-submit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
