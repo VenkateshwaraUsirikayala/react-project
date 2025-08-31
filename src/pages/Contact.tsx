@@ -112,19 +112,18 @@ const Contact = () => {
       handle: "@bharthanatyam_carnatic_music",
       color: "hover:text-pink-600",
     },
-    // ,
-    // {
-    //   icon: Youtube,
-    //   platform: "YouTube",
-    //   handle: "Artistic Soul Channel",
-    //   color: "hover:text-red-600",
-    // }
     {
-      icon: Facebook,
-      platform: "Facebook",
-      handle: "bharthanatyam_carnatic_music",
-      color: "hover:text-blue-600",
+      icon: Youtube,
+      platform: "YouTube",
+      handle: "Artistic Soul Channel",
+      color: "hover:text-red-600",
     },
+    // {
+    //   icon: Facebook,
+    //   platform: "Facebook",
+    //   handle: "bharthanatyam_carnatic_music",
+    //   color: "hover:text-blue-600",
+    // },
     {
       icon: MessageCircle,
       platform: "WhatsApp",

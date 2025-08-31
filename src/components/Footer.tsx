@@ -48,15 +48,15 @@ const Footer = () => {
             
             {/* Social Links */}
             <div className="flex justify-center md:justify-end space-x-4">
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300">
+              <a href="https://www.instagram.com/bharthanatyam_carnatic_music" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300">
+              <a href="https://www.youtube.com/@hsindianculture9100" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300">
                 <Youtube className="h-5 w-5" />
               </a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300">
-                <Facebook className="h-5 w-5" />
-              </a>
+              {/*<a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300">*/}
+              {/*  <Facebook className="h-5 w-5" />*/}
+              {/*</a>*/}
               <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300">
                 <MessageCircle className="h-5 w-5" />
               </a>
