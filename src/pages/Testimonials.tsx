@@ -1,10 +1,11 @@
 
-import React from 'react';
-import { Star, Quote, Users, Award, Heart, TrendingUp } from 'lucide-react';
+import React, {useState} from 'react';
+import {Star, Quote, Users, Award, Heart, TrendingUp, Play} from 'lucide-react';
 import Avatar from "react-avatar";
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel.tsx";
 
 const Testimonials = () => {
+    const [currentlyPlaying, setCurrentlyPlaying] = useState<string | null>(null);
     const testimonials = [
         {
             name: "Seerat Barot",
@@ -124,6 +125,10 @@ const Testimonials = () => {
     "500+ successful students trained",
 
   ];
+
+    const handleVideoPlay = (videoId: string) => {
+        setCurrentlyPlaying(videoId);
+    };
 
   return (
     <div className="pt-20">
@@ -313,22 +318,40 @@ const Testimonials = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
-                    { id: "https://ik.imagekit.io/6sx6t35ks/Sahana%20Video%20Review.mp4?updatedAt=1756655963935", title: "Priya's Bharatanatyam Journey", description: "From beginner to confident performer" },
-                    { id: "https://ik.imagekit.io/6sx6t35ks/Shanaya%20Video%20Review.mp4?updatedAt=1756657199195", title: "Adult Student Success", description: "Learning classical vocals later in life" },
-                    { id: "https://student-video-reviews.s3.us-east-1.amazonaws.com/Advitha%20Singh%20Video%20Review.mp4?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQD5AhHTD3H1ICoqZAqM%2FtbCo6xcyZKq6liUjWoUXGXxHgIgXyyO327IIBhBQlQmdxWPM%2F99Dq7TYjnIBi7JoT5gdQkqwgMI8v%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwyMDE3OTQ4ODAxMTUiDKbQVLAFNp507hixFiqWA4uxxYV9OVoeTFp%2BWAZ2zNsqkIR828JpgUjgjpc0Hzb%2BEcmdb62JECcIH%2Fbf6FqNwQtHbRzU2So9NLDFxQ9oeqe5GmIqlASQkFVMQGy0AmjVhzJeVdnPgkfJ6aX9Ru0oGOwj9zPR1kz28niJARAHl0gJ7uBZLDIs6f8f9fszkpwzc8hFCq6mGI0GuUPZqze2VzAfhV4m6WNQYcqZRIIRC89j3qNBqtMI476Eid8uWDV5xGmBhHrUwAEuvnUZbFo3KSLkCMAVOUSZceLHkH9zPtEeYStMzC6VYR1BHOXtMsKIx8bOGkvMbU1WbHUHb%2BKRUFiLZQvY0nrVWjOCUMjNFWwWMutIOOhQ57mEwlZV2j9Yt1G%2FkDrylpBmdDjFkIWat4N96tOwwimM2QEcymzEpiv9e8ugbG5Vr3XFlfvppo3genIGh6hX3%2BKpBNq4BOiejt2yj5mJR%2BJseqgDSfc3CQVbi9r1AgSBktr20u8zVSh3VdIRMPZfcr3iHw6Baq6nlNpnYFo2fwVwJX0tiO%2Be1bMrAjkcuk0whsjRxQY63gIXZXwQD5W3tZe1Jv%2Ffvn1rCrgWZ8rwttbm9qJIiLxMisX5Opgbyrzx%2BQZDRp5jPm%2BANPzVJRu63l2I2bregQuuugyzpFDz4Rn%2B7OgHtP%2BPGY2xlz5bqJvxiIWH2XaGmp2EKzEO0xjKPzapCTVMmXpZ4A3CNcW5P1%2BNQOQp%2F5KM3p8lJJDar8wYp%2FrG5NuR%2Fqd2bfsdy2iOWbQTwA7a%2FN6es7Bje73uyYY1egnzhO0o7JVbBExz2A2FEMjU0gi6ubQM1JSxRL0V%2BYG1enjuXRrEMZgwVIHDnaksxHEaqExBIJeWdVwPl813COboQxHNjNCynJCcCp2xbv2bse4GK4i%2BVz9H5SvQnhivOt9dJsnty9Cnz9JYhxV%2FkcCOaqG9p7OVp0oJ4Kmd0pYvRSAC%2BSSqOqbmCvtCM3ZN9f9Q0WNkOdO5hHkqWVPhwVMCEFK1AxEpUxQ9qdr2xAzxwxlbig%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAS567JQJZUE3T7OYD%2F20250831%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250831T165753Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=2c4eceafc8cfb56efc3a14209b6779ed96a213997ac9e6b716b5cb24548d649b", title: "Teen Performance Highlights", description: "Young dancers showcasing their skills" }
+                    { id: "https://cdn.bhavanjali.art/Sahana-Video-Review.mp4", title: "Priya's Bharatanatyam Journey", description: "From beginner to confident performer" },
+                    { id: "https://cdn.bhavanjali.art/Shanaya-Video-Review.mp4", title: "Adult Student Success", description: "Learning classical vocals later in life" },
+                    { id: "https://cdn.bhavanjali.art/Advitha-Video-Review.mp4", title: "Teen Performance Highlights", description: "Young dancers showcasing their skills" }
                 ].map((video, index) => (
                     <div
                         key={index}
                         className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-white/20 transition-colors duration-300"
                     >
-                        <div className="aspect-video">
-                            <iframe
-                                src={video.id}
-                                title={video.title}
-                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                                className="w-full h-full rounded-t-2xl"
-                            ></iframe>
+                        <div className="aspect-video relative">
+                            {currentlyPlaying === video.id ? (
+                                <iframe
+                                    src={video.id}
+                                    title={video.title}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                    className="w-full h-full rounded-t-2xl"
+                                />
+                            ) : (
+                                <>
+                                    {/*<img*/}
+                                    {/*    src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}*/}
+                                    {/*    alt={video.title}*/}
+                                    {/*    className="w-full h-full object-cover rounded-t-2xl"*/}
+                                    {/*/>*/}
+                                    <div
+                                        className="absolute inset-0 flex items-center justify-center cursor-pointer"
+                                        onClick={() => handleVideoPlay(video.id)}
+                                    >
+                                        <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                            <Play className="h-8 w-8 text-white ml-1" />
+                                        </div>
+                                    </div>
+                                </>
+                            )}
                         </div>
                         <div className="p-6">
                             <h3 className="font-bold text-lg mb-2">{video.title}</h3>
