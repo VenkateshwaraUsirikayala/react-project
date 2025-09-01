@@ -318,9 +318,9 @@ const Testimonials = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
-                    { id: "https://cdn.bhavanjali.art/Sahana-Video-Review.mp4", title: "Priya's Bharatanatyam Journey", description: "From beginner to confident performer" },
-                    { id: "https://cdn.bhavanjali.art/Shanaya-Video-Review.mp4", title: "Adult Student Success", description: "Learning classical vocals later in life" },
-                    { id: "https://cdn.bhavanjali.art/Advitha-Video-Review.mp4", title: "Teen Performance Highlights", description: "Young dancers showcasing their skills" }
+                    { id: "https://cdn.bhavanjali.art/Sahana-Video-Review.mp4", title: "Sahana's Bharatanatyam Journey", description: "From beginner to confident performer" },
+                    { id: "https://cdn.bhavanjali.art/Shanaya-Video-Review.mp4", title: "Shanaya Student Success", description: "Learning classical vocals later in life" },
+                    { id: "https://cdn.bhavanjali.art/Advitha-Video-Review.mp4", title: "Advitha Singh Performance", description: "Young dancers showcasing their skills" }
                 ].map((video, index) => (
                     <div
                         key={index}
