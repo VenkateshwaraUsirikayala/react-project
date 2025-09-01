@@ -21,8 +21,10 @@ const Portfolio = () => {
       type: 'video',
       title: 'Bharatanatyam Recital 2023',
       description: 'Traditional Bharatanatyam performance at the Cultural Arts Festival',
-      thumbnail: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&h=400&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+      // thumbnail: '',
+      videoUrl: '',
+      thumbnail: 'https://i.pinimg.com/736x/dc/de/63/dcde63798e0dcd8da6d9edc1b69d20b0.jpg',
+      // videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
       id: 2,
@@ -30,16 +32,20 @@ const Portfolio = () => {
       type: 'video',
       title: 'Jazz Performance at Blue Note',
       description: 'Live jazz performance featuring contemporary vocals',
-      thumbnail: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+      // thumbnail: '',
+      videoUrl: '',
+      thumbnail: 'https://i.pinimg.com/736x/fb/b6/8d/fbb68da1234590c202bc55f17f3dc806.jpg',
+      // videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
       id: 3,
       category: 'students',
       type: 'image',
       title: 'Annual Student Recital',
-      description: 'Proud moment with my students after their first public performance',
-      thumbnail: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?w=600&h=400&fit=crop'
+      description: '',
+      // thumbnail: ''
+      // description: 'Proud moment with my students after their first public performance',
+      thumbnail: 'https://i.pinimg.com/736x/88/a1/b0/88a1b0511163892a8ccbdcecdbdf8919.jpg'
     },
     {
       id: 4,
@@ -47,16 +53,20 @@ const Portfolio = () => {
       type: 'video',
       title: 'Contemporary Fusion',
       description: 'Modern dance piece blending Eastern and Western styles',
-      thumbnail: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=600&h=400&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+      // thumbnail: '',
+      videoUrl: '',
+      thumbnail: 'https://i.pinimg.com/736x/0e/99/bf/0e99bf9ec7ec1a5ed25272a81e93a499.jpg',
+      // videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
       id: 5,
       category: 'behind',
       type: 'image',
       title: 'Studio Sessions',
-      description: 'Behind the scenes moments during intensive training sessions',
-      thumbnail: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600&h=400&fit=crop'
+      description: '',
+      // thumbnail: ''
+      // description: 'Behind the scenes moments during intensive training sessions',
+      thumbnail: 'https://i.pinimg.com/1200x/7b/af/ef/7bafef1efa4569b006af7a806e7515d0.jpg'
     },
     {
       id: 6,
@@ -64,8 +74,10 @@ const Portfolio = () => {
       type: 'video',
       title: 'Classical Vocal Recital',
       description: 'Traditional Indian classical vocals with live accompaniment',
-      thumbnail: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=600&h=400&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+      // thumbnail: '',
+      videoUrl: '',
+      thumbnail: 'https://i.pinimg.com/736x/bb/20/53/bb2053a09465cf4ad08b08283afb2581.jpg',
+      // videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     }
   ];
 

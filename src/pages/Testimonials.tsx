@@ -334,6 +334,7 @@ const Testimonials = () => {
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen
                                     className="w-full h-full rounded-t-2xl"
+                                    onContextMenu={(e) => e.preventDefault()}
                                 />
                             ) : (
                                 <>
