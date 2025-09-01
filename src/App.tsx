@@ -41,7 +41,6 @@ const App = () => (
         </div>
       </BrowserRouter>
     </TooltipProvider>
-    <Analytics />
   </QueryClientProvider>
 );
 
