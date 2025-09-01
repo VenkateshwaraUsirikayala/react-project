@@ -57,7 +57,7 @@ const Footer = () => {
               {/*<a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300">*/}
               {/*  <Facebook className="h-5 w-5" />*/}
               {/*</a>*/}
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300">
+              <a href="https://wa.me/919113694811?text=Hi,%20I’d%20like%20to%20know%20more%20about%20your%20Bharatanatyam%20and%20Singing%20Dance%20classes.%20Could%20you%20please%20share%20details%20about%20the%20class%20timings,%20fees,%20and%20the%20admission%20process?%20Thank%20you!" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300">
                 <MessageCircle className="h-5 w-5" />
               </a>
             </div>

@@ -181,7 +181,9 @@ const Testimonials = () => {
                         { url: "https://cdn.bhavanjali.art/Advitha-Video-Review.mp4",thumbnail: "https://cdn.bhavanjali.art/thumbnails/Aadvita-Singh-thumbnail.png", title: "Advitha Singh Performance", description: "Young Bharatanatyam Dancer Showcasing Her Skills" },
                         { url: "https://cdn.bhavanjali.art/Shanaya-Cousin-Video-Review.mp4", thumbnail: "https://cdn.bhavanjali.art/thumbnails/Mishka-thumbnail.png", title: "Mishika Loving Her Classes", description: "Happy Mom Shares How Classes Stay Fun and Engaging" },
                         { url: "https://cdn.bhavanjali.art/Ojaswi-Video-Review.mp4", thumbnail: "https://cdn.bhavanjali.art/thumbnails/Ojaswi-thumbnail.png", title: "Ojaswi's Confident Progress", description: "Proud Mom Shares Her Daughter’s Growth in Bharatanatyam & Music" },
-                        { url: "https://cdn.bhavanjali.art/Sanvitha-Video-Review.mp4",thumbnail: 'https://cdn.bhavanjali.art/thumbnails/Sanvitha-thumbnail.png', title: "Sanvitha’s Experience : Loving the Learning", description: "Confused About Online Learning? Hear This Parent’s Beautiful Story" }
+                        { url: "https://cdn.bhavanjali.art/Sanvitha-Video-Review.mp4",thumbnail: 'https://cdn.bhavanjali.art/thumbnails/Sanvitha-thumbnail.png', title: "Sanvitha’s Experience : Loving the Learning", description: "Confused About Online Learning? Hear This Parent’s Beautiful Story" },
+                        { url: "https://cdn.bhavanjali.art/Supriya-Video-Review.mp4",thumbnail: 'https://cdn.bhavanjali.art/thumbnails/Supriya-thumbnail.png', title: "Sanvitha’s Experience : Loving the Learning", description: "Confused About Online Learning? Hear This Parent’s Beautiful Story" },
+                        { url: "https://cdn.bhavanjali.art/Snehal-Patil-Video-Review.mp4",thumbnail: 'https://cdn.bhavanjali.art/thumbnails/Snehal-Patil-thumbnail.png', title: "Sanvitha’s Experience : Loving the Learning", description: "Confused About Online Learning? Hear This Parent’s Beautiful Story" }
                     ].map((video, index) => (
                         <div
                             key={index}
@@ -208,7 +210,7 @@ const Testimonials = () => {
                                             className="absolute inset-0 flex items-center justify-center cursor-pointer"
                                             onClick={() => handleVideoPlay(video.url)}
                                         >
-                                            <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                            <div className="w-16 h-16 bg-white/20  rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                                 <Play className="h-8 w-8 text-white ml-1" />
                                             </div>
                                         </div>
@@ -221,6 +223,12 @@ const Testimonials = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                <div className="text-center mt-12">
+                    <p className="text-xl text-white/80 font-medium">
+                        ... and many more inspiring stories
+                    </p>
                 </div>
             </div>
         </section>
