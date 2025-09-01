@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Play, ExternalLink, Filter, X } from 'lucide-react';
+import {Play, ExternalLink, Filter, X, Award} from 'lucide-react';
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -92,6 +92,14 @@ const Portfolio = () => {
   const closeModal = () => {
     setSelectedMedia(null);
   };
+
+  const achievements = [
+    "Best Dance Instructor Award 2024 - National Level Dance Guru",
+    "Invited as guest judge for VIBGYOR Group of Schools competitions",
+    "Recognized by Chennai Bridge Academy and Mysore Gangubai Hangal University",
+    "500+ successful students trained",
+
+  ];
 
   return (
     <div className="pt-20">
@@ -213,6 +221,31 @@ const Portfolio = () => {
           </div>
         </div>
       )}
+
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Recognition & Achievements</h2>
+            <p className="text-xl text-gray-600">
+              Awards and recognition that validate my commitment to excellence
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {achievements.map((achievement, index) => (
+                <div
+                    key={index}
+                    className="flex items-center space-x-4 p-6 bg-gradient-to-r from-coral-50 to-purple-50 rounded-xl hover:shadow-lg transition-shadow duration-300"
+                >
+                  <div className="flex-shrink-0">
+                    <Award className="h-6 w-6 text-coral-500" />
+                  </div>
+                  <p className="text-gray-800 font-medium">{achievement}</p>
+                </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-coral-500 to-purple-600 text-white">

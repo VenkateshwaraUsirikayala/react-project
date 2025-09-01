@@ -111,12 +111,14 @@ const Contact = () => {
       platform: "Instagram",
       handle: "@bharthanatyam_carnatic_music",
       color: "hover:text-pink-600",
+      url: "https://www.instagram.com/bharthanatyam_carnatic_music/"
     },
     {
       icon: Youtube,
       platform: "YouTube",
       handle: "Artistic Soul Channel",
       color: "hover:text-red-600",
+      url: "https://www.youtube.com/@hsindianculture9100"
     },
     // {
     //   icon: Facebook,
@@ -129,7 +131,8 @@ const Contact = () => {
       platform: "WhatsApp",
       handle: "+91 91136 94811",
       color: "hover:text-green-600",
-    },
+      url: "https://wa.me/919113694811?text=Hi,%20I’d%20like%20to%20know%20more%20about%20your%20Bharatanatyam%20and%20Singing%20Dance%20classes.%20Could%20you%20please%20share%20details%20about%20the%20class%20timings,%20fees,%20and%20the%20admission%20process?%20Thank%20you!"
+    }
   ];
 
   const faqs = [
@@ -390,7 +393,7 @@ const Contact = () => {
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}
-                      href="#"
+                      href={social.url} target="_blank" rel="noopener noreferrer"
                       className={`flex items-center space-x-4 p-4 rounded-lg border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 ${social.color}`}
                     >
                       <social.icon className="h-6 w-6 text-gray-600" />

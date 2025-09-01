@@ -118,13 +118,6 @@ const Testimonials = () => {
     { number: "95%", label: "Skill Improvement", icon: TrendingUp, color: "from-green-500 to-emerald-500" }
   ];
 
-  const achievements = [
-    "Best Dance Instructor Award 2024 - National Level Dance Guru",
-    "Invited as guest judge for VIBGYOR Group of Schools competitions",
-    "Recognized by Chennai Bridge Academy and Mysore Gangubai Hangal University",
-    "500+ successful students trained",
-
-  ];
 
     const handleVideoPlay = (videoId: string) => {
         setCurrentlyPlaying(videoId);
@@ -170,203 +163,179 @@ const Testimonials = () => {
         </div>
       </section>
 
-      {/* Testimonials Grid */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">What People Say</h2>
-            <p className="text-xl text-gray-600">
-              Real experiences from real students and their families
-            </p>
-          </div>
+        {/* Video Testimonials Preview */}
+        <section className="py-20 bg-gradient-to-r from-coral-500 to-purple-600 text-white">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl font-bold mb-4">Video Testimonials</h2>
+                    <p className="text-xl opacity-90">
+                        Hear directly from my students about their journey
+                    </p>
+                </div>
 
-          {/*<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">*/}
-          {/*  {testimonials.map((testimonial, index) => (*/}
-          {/*    <div */}
-          {/*      key={index}*/}
-          {/*      className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2 relative overflow-hidden"*/}
-          {/*    >*/}
-          {/*      <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-coral-100 to-purple-100 rounded-bl-2xl flex items-center justify-center">*/}
-          {/*        <Quote className="h-6 w-6 text-coral-500" />*/}
-          {/*      </div>*/}
-          {/*      */}
-          {/*      <div className="flex items-center mb-6">*/}
-          {/*        <Avatar name={testimonial.name} round={true} size="40" className="mr-2" maxInitials={2}/>*/}
-          {/*        <div>*/}
-          {/*          <h3 className="font-bold text-gray-900">{testimonial.name}</h3>*/}
-          {/*          <p className="text-sm text-gray-600">{testimonial.role}</p>*/}
-          {/*        </div>*/}
-          {/*      </div>*/}
-          {/*      */}
-          {/*      <div className="flex mb-4">*/}
-          {/*        {[...Array(testimonial.rating)].map((_, i) => (*/}
-          {/*          <Star key={i} className="h-5 w-5 text-gold-400 fill-current" />*/}
-          {/*        ))}*/}
-          {/*      </div>*/}
-          {/*      */}
-          {/*      <p className="text-gray-700 leading-relaxed text-sm">*/}
-          {/*        "{testimonial.content}"*/}
-          {/*      </p>*/}
-          {/*      */}
-          {/*      <div className="mt-6">*/}
-          {/*        <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${*/}
-          {/*          testimonial.category === 'parent' ? 'bg-coral-100 text-coral-700' :*/}
-          {/*          testimonial.category === 'adult' ? 'bg-purple-100 text-purple-700' :*/}
-          {/*          testimonial.category === 'teen' ? 'bg-gold-100 text-gold-700' :*/}
-          {/*          testimonial.category === 'professional' ? 'bg-green-100 text-green-700' :*/}
-          {/*          'bg-indigo-100 text-indigo-700'*/}
-          {/*        }`}>*/}
-          {/*          {testimonial.category === 'parent' ? 'Parent Review' :*/}
-          {/*           testimonial.category === 'adult' ? 'Adult Student' :*/}
-          {/*           testimonial.category === 'teen' ? 'Teen Student' :*/}
-          {/*           testimonial.category === 'professional' ? 'Professional' :*/}
-          {/*           'Organization'}*/}
-          {/*        </span>*/}
-          {/*      </div>*/}
-          {/*    </div>*/}
-          {/*  ))}*/}
-          {/*</div>*/}
-
-          <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full max-w-5xl mx-auto"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                    <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2 relative overflow-hidden h-full">
-                      <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-coral-100 to-purple-100 rounded-bl-2xl flex items-center justify-center">
-                        <Quote className="h-6 w-6 text-coral-500" />
-                      </div>
-
-                      <div className="flex items-center mb-6">
-                        {/*<img*/}
-                        {/*    src={testimonial.image}*/}
-                        {/*    alt={testimonial.name}*/}
-                        {/*    className="w-12 h-12 rounded-full object-cover mr-4 ring-2 ring-gray-100"*/}
-                        {/*/>*/}
-                          <Avatar name={testimonial.name} round={true} maxInitials={2} size={"40"} className="mr-2 mb-1"/>
-                        <div>
-                          <h3 className="font-bold text-gray-900">{testimonial.name}</h3>
-                          <p className="text-sm text-gray-600">{testimonial.role}</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {[
+                        { url: "https://cdn.bhavanjali.art/Sahana-Video-Review.mp4", thumbnail: "https://cdn.bhavanjali.art/thumbnails/Sahana-thumbnail.png", title: "Sahana's Bharatanatyam Journey", description: "Mom & Daughter Share Their Wonderful Bharatanatyam Experience" },
+                        { url: "https://cdn.bhavanjali.art/Shanaya-Video-Review.mp4", thumbnail: "https://cdn.bhavanjali.art/thumbnails/Shanaya-thumbnail.png", title: "Shanaya Student Success", description: "Parent Shares Joyful Experience of Daughter Learning Bharatanatyam" },
+                        { url: "https://cdn.bhavanjali.art/Aahika-Video-Review.mp4",thumbnail: "https://cdn.bhavanjali.art/thumbnails/Aahika-thumbnail.png", title: "Aahika's Learning : From First Steps to Stage", description: "A Special Message from the Kid & A Happy Review from Mom" },
+                        { url: "https://cdn.bhavanjali.art/Advitha-Video-Review.mp4",thumbnail: "https://cdn.bhavanjali.art/thumbnails/Aadvita-Singh-thumbnail.png", title: "Advitha Singh Performance", description: "Young Bharatanatyam Dancer Showcasing Her Skills" },
+                        { url: "https://cdn.bhavanjali.art/Shanaya-Cousin-Video-Review.mp4", thumbnail: "https://cdn.bhavanjali.art/thumbnails/Mishka-thumbnail.png", title: "Mishika Loving Her Classes", description: "Happy Mom Shares How Classes Stay Fun and Engaging" },
+                        { url: "https://cdn.bhavanjali.art/Ojaswi-Video-Review.mp4", thumbnail: "https://cdn.bhavanjali.art/thumbnails/Ojaswi-thumbnail.png", title: "Ojaswi's Confident Progress", description: "Proud Mom Shares Her Daughter’s Growth in Bharatanatyam & Music" },
+                        { url: "https://cdn.bhavanjali.art/Sanvitha-Video-Review.mp4",thumbnail: 'https://cdn.bhavanjali.art/thumbnails/Sanvitha-thumbnail.png', title: "Sanvitha’s Experience : Loving the Learning", description: "Confused About Online Learning? Hear This Parent’s Beautiful Story" }
+                    ].map((video, index) => (
+                        <div
+                            key={index}
+                            className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-white/20 transition-colors duration-300"
+                        >
+                            <div className="aspect-video relative">
+                                {currentlyPlaying === video.url ? (
+                                    <iframe
+                                        src={video.url}
+                                        title={video.title}
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        className="w-full h-full rounded-t-2xl"
+                                        onContextMenu={(e) => e.preventDefault()}
+                                    />
+                                ) : (
+                                    <>
+                                        <img
+                                            src={video.thumbnail}
+                                            alt={video.title}
+                                            className="w-full h-full object-cover rounded-t-2xl"
+                                        />
+                                        <div
+                                            className="absolute inset-0 flex items-center justify-center cursor-pointer"
+                                            onClick={() => handleVideoPlay(video.url)}
+                                        >
+                                            <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                                <Play className="h-8 w-8 text-white ml-1" />
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
+                            </div>
+                            <div className="p-6">
+                                <h3 className="font-bold text-lg mb-2">{video.title}</h3>
+                                <p className="text-white/80 text-sm">{video.description}</p>
+                            </div>
                         </div>
-                      </div>
+                    ))}
+                </div>
+            </div>
+        </section>
 
-                      <div className="flex mb-4">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star key={i} className="h-5 w-5 text-gold-400 fill-current" />
-                        ))}
-                      </div>
+      {/* Achievements Section */}
+        <section className="py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl font-bold text-gray-900 mb-4">What People Say</h2>
+                    <p className="text-xl text-gray-600">
+                        Real experiences from real students and their families
+                    </p>
+                </div>
 
-                      <p className="text-gray-700 leading-relaxed text-sm">
-                        "{testimonial.content}"
-                      </p>
+                {/*<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">*/}
+                {/*  {testimonials.map((testimonial, index) => (*/}
+                {/*    <div */}
+                {/*      key={index}*/}
+                {/*      className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2 relative overflow-hidden"*/}
+                {/*    >*/}
+                {/*      <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-coral-100 to-purple-100 rounded-bl-2xl flex items-center justify-center">*/}
+                {/*        <Quote className="h-6 w-6 text-coral-500" />*/}
+                {/*      </div>*/}
+                {/*      */}
+                {/*      <div className="flex items-center mb-6">*/}
+                {/*        <Avatar name={testimonial.name} round={true} size="40" className="mr-2" maxInitials={2}/>*/}
+                {/*        <div>*/}
+                {/*          <h3 className="font-bold text-gray-900">{testimonial.name}</h3>*/}
+                {/*          <p className="text-sm text-gray-600">{testimonial.role}</p>*/}
+                {/*        </div>*/}
+                {/*      </div>*/}
+                {/*      */}
+                {/*      <div className="flex mb-4">*/}
+                {/*        {[...Array(testimonial.rating)].map((_, i) => (*/}
+                {/*          <Star key={i} className="h-5 w-5 text-gold-400 fill-current" />*/}
+                {/*        ))}*/}
+                {/*      </div>*/}
+                {/*      */}
+                {/*      <p className="text-gray-700 leading-relaxed text-sm">*/}
+                {/*        "{testimonial.content}"*/}
+                {/*      </p>*/}
+                {/*      */}
+                {/*      <div className="mt-6">*/}
+                {/*        <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${*/}
+                {/*          testimonial.category === 'parent' ? 'bg-coral-100 text-coral-700' :*/}
+                {/*          testimonial.category === 'adult' ? 'bg-purple-100 text-purple-700' :*/}
+                {/*          testimonial.category === 'teen' ? 'bg-gold-100 text-gold-700' :*/}
+                {/*          testimonial.category === 'professional' ? 'bg-green-100 text-green-700' :*/}
+                {/*          'bg-indigo-100 text-indigo-700'*/}
+                {/*        }`}>*/}
+                {/*          {testimonial.category === 'parent' ? 'Parent Review' :*/}
+                {/*           testimonial.category === 'adult' ? 'Adult Student' :*/}
+                {/*           testimonial.category === 'teen' ? 'Teen Student' :*/}
+                {/*           testimonial.category === 'professional' ? 'Professional' :*/}
+                {/*           'Organization'}*/}
+                {/*        </span>*/}
+                {/*      </div>*/}
+                {/*    </div>*/}
+                {/*  ))}*/}
+                {/*</div>*/}
 
-                      <div className="mt-6">
+                <Carousel
+                    opts={{
+                        align: "start",
+                        loop: true,
+                    }}
+                    className="w-full max-w-5xl mx-auto"
+                >
+                    <CarouselContent className="-ml-2 md:-ml-4">
+                        {testimonials.map((testimonial, index) => (
+                            <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2 relative overflow-hidden h-full">
+                                    <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-coral-100 to-purple-100 rounded-bl-2xl flex items-center justify-center">
+                                        <Quote className="h-6 w-6 text-coral-500" />
+                                    </div>
+
+                                    <div className="flex items-center mb-6">
+                                        {/*<img*/}
+                                        {/*    src={testimonial.image}*/}
+                                        {/*    alt={testimonial.name}*/}
+                                        {/*    className="w-12 h-12 rounded-full object-cover mr-4 ring-2 ring-gray-100"*/}
+                                        {/*/>*/}
+                                        <Avatar name={testimonial.name} round={true} maxInitials={2} size={"40"} className="mr-2 mb-1"/>
+                                        <div>
+                                            <h3 className="font-bold text-gray-900">{testimonial.name}</h3>
+                                            <p className="text-sm text-gray-600">{testimonial.role}</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex mb-4">
+                                        {[...Array(testimonial.rating)].map((_, i) => (
+                                            <Star key={i} className="h-5 w-5 text-gold-400 fill-current" />
+                                        ))}
+                                    </div>
+
+                                    <p className="text-gray-700 leading-relaxed text-sm">
+                                        "{testimonial.content}"
+                                    </p>
+
+                                    <div className="mt-6">
                           <span className="`inline-block px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-700'">
                               {testimonial.state !== ''? testimonial.state +", "+ testimonial.country : testimonial.country}
                           </span>
-                      </div>
-                    </div>
-                  </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-        </div>
-      </section>
-
-      {/* Achievements Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Recognition & Achievements</h2>
-            <p className="text-xl text-gray-600">
-              Awards and recognition that validate my commitment to excellence
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {achievements.map((achievement, index) => (
-              <div
-                key={index}
-                className="flex items-center space-x-4 p-6 bg-gradient-to-r from-coral-50 to-purple-50 rounded-xl hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="flex-shrink-0">
-                  <Award className="h-6 w-6 text-coral-500" />
-                </div>
-                <p className="text-gray-800 font-medium">{achievement}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Video Testimonials Preview */}
-      <section className="py-20 bg-gradient-to-r from-coral-500 to-purple-600 text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Video Testimonials</h2>
-            <p className="text-xl opacity-90">
-              Hear directly from my students about their journey
-            </p>
-          </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {[
-                    { url: "https://cdn.bhavanjali.art/Sahana-Video-Review.mp4", thumbnail: "https://cdn.bhavanjali.art/thumbnails/Sahana-thumbnail.png", title: "Sahana's Bharatanatyam Journey", description: "Mom & Daughter Share Their Wonderful Bharatanatyam Experience" },
-                    { url: "https://cdn.bhavanjali.art/Shanaya-Video-Review.mp4", thumbnail: "https://cdn.bhavanjali.art/thumbnails/Shanaya-thumbnail.png", title: "Shanaya Student Success", description: "Parent Shares Joyful Experience of Daughter Learning Bharatanatyam" },
-                    { url: "https://cdn.bhavanjali.art/Aahika-Video-Review.mp4",thumbnail: "https://cdn.bhavanjali.art/thumbnails/Aahika-thumbnail.png", title: "Aahika's Learning : From First Steps to Stage", description: "A Special Message from the Kid & A Happy Review from Mom" },
-                    { url: "https://cdn.bhavanjali.art/Advitha-Video-Review.mp4",thumbnail: "https://cdn.bhavanjali.art/thumbnails/Aadvita-Singh-thumbnail.png", title: "Advitha Singh Performance", description: "Young Bharatanatyam Dancer Showcasing Her Skills" },
-                    { url: "https://cdn.bhavanjali.art/Shanaya-Cousin-Video-Review.mp4", thumbnail: "https://cdn.bhavanjali.art/thumbnails/Mishka-thumbnail.png", title: "Mishika Loving Her Classes", description: "Happy Mom Shares How Classes Stay Fun and Engaging" },
-                    { url: "https://cdn.bhavanjali.art/Ojaswi-Video-Review.mp4", title: "Ojaswi's Confident Progress", description: "Proud Mom Shares Her Daughter’s Growth in Bharatanatyam & Music" },
-                    { url: "https://cdn.bhavanjali.art/Sanvitha-Video-Review.mp4",thumbnail: 'https://cdn.bhavanjali.art/thumbnails/Sanvitha-thumbnail.png', title: "Sanvitha’s Experience : Loving the Learning", description: "Confused About Online Learning? Hear This Parent’s Beautiful Story" }
-                ].map((video, index) => (
-                    <div
-                        key={index}
-                        className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-white/20 transition-colors duration-300"
-                    >
-                        <div className="aspect-video relative">
-                            {currentlyPlaying === video.url ? (
-                                <iframe
-                                    src={video.url}
-                                    title={video.title}
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                    className="w-full h-full rounded-t-2xl"
-                                    onContextMenu={(e) => e.preventDefault()}
-                                />
-                            ) : (
-                                <>
-                                    <img
-                                        src={video.thumbnail}
-                                        alt={video.title}
-                                        className="w-full h-full object-cover rounded-t-2xl"
-                                    />
-                                    <div
-                                        className="absolute inset-0 flex items-center justify-center cursor-pointer"
-                                        onClick={() => handleVideoPlay(video.url)}
-                                    >
-                                        <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                            <Play className="h-8 w-8 text-white ml-1" />
-                                        </div>
                                     </div>
-                                </>
-                            )}
-                        </div>
-                        <div className="p-6">
-                            <h3 className="font-bold text-lg mb-2">{video.title}</h3>
-                            <p className="text-white/80 text-sm">{video.description}</p>
-                        </div>
-                    </div>
-                ))}
+                                </div>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                </Carousel>
             </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Testimonials Grid */}
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-gold-50 to-yellow-50">
