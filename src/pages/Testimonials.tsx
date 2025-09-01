@@ -318,18 +318,22 @@ const Testimonials = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
-                    { id: "https://cdn.bhavanjali.art/Sahana-Video-Review.mp4", title: "Sahana's Bharatanatyam Journey", description: "From beginner to confident performer" },
-                    { id: "https://cdn.bhavanjali.art/Shanaya-Video-Review.mp4", title: "Shanaya Student Success", description: "Learning classical vocals later in life" },
-                    { id: "https://cdn.bhavanjali.art/Advitha-Video-Review.mp4", title: "Advitha Singh Performance", description: "Young dancers showcasing their skills" }
+                    { url: "https://cdn.bhavanjali.art/Sahana-Video-Review.mp4", thumbnail: "https://cdn.bhavanjali.art/thumbnails/Sahana-thumbnail.png", title: "Sahana's Bharatanatyam Journey", description: "Mom & Daughter Share Their Wonderful Bharatanatyam Experience" },
+                    { url: "https://cdn.bhavanjali.art/Shanaya-Video-Review.mp4", thumbnail: "https://cdn.bhavanjali.art/thumbnails/Shanaya-thumbnail.png", title: "Shanaya Student Success", description: "Parent Shares Joyful Experience of Daughter Learning Bharatanatyam" },
+                    { url: "https://cdn.bhavanjali.art/Aahika-Video-Review.mp4",thumbnail: "https://cdn.bhavanjali.art/thumbnails/Aahika-thumbnail.png", title: "Aahika's Learning : From First Steps to Stage", description: "A Special Message from the Kid & A Happy Review from Mom" },
+                    { url: "https://cdn.bhavanjali.art/Advitha-Video-Review.mp4",thumbnail: "https://cdn.bhavanjali.art/thumbnails/Aadvita-Singh-thumbnail.png", title: "Advitha Singh Performance", description: "Young Bharatanatyam Dancer Showcasing Her Skills" },
+                    { url: "https://cdn.bhavanjali.art/Shanaya-Cousin-Video-Review.mp4", thumbnail: "https://cdn.bhavanjali.art/thumbnails/Mishka-thumbnail.png", title: "Mishika Loving Her Classes", description: "Happy Mom Shares How Classes Stay Fun and Engaging" },
+                    { url: "https://cdn.bhavanjali.art/Ojaswi-Video-Review.mp4", title: "Ojaswi's Confident Progress", description: "Proud Mom Shares Her Daughter’s Growth in Bharatanatyam & Music" },
+                    { url: "https://cdn.bhavanjali.art/Sanvitha-Video-Review.mp4",thumbnail: 'https://cdn.bhavanjali.art/thumbnails/Sanvitha-thumbnail.png', title: "Sanvitha’s Experience : Loving the Learning", description: "Confused About Online Learning? Hear This Parent’s Beautiful Story" }
                 ].map((video, index) => (
                     <div
                         key={index}
                         className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-white/20 transition-colors duration-300"
                     >
                         <div className="aspect-video relative">
-                            {currentlyPlaying === video.id ? (
+                            {currentlyPlaying === video.url ? (
                                 <iframe
-                                    src={video.id}
+                                    src={video.url}
                                     title={video.title}
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen
@@ -338,14 +342,14 @@ const Testimonials = () => {
                                 />
                             ) : (
                                 <>
-                                    {/*<img*/}
-                                    {/*    src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}*/}
-                                    {/*    alt={video.title}*/}
-                                    {/*    className="w-full h-full object-cover rounded-t-2xl"*/}
-                                    {/*/>*/}
+                                    <img
+                                        src={video.thumbnail}
+                                        alt={video.title}
+                                        className="w-full h-full object-cover rounded-t-2xl"
+                                    />
                                     <div
                                         className="absolute inset-0 flex items-center justify-center cursor-pointer"
-                                        onClick={() => handleVideoPlay(video.id)}
+                                        onClick={() => handleVideoPlay(video.url)}
                                     >
                                         <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                             <Play className="h-8 w-8 text-white ml-1" />
