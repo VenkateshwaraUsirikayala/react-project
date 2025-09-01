@@ -28,7 +28,7 @@ const Home = () => {
 
   const stats = [
     { number: "500+", label: "Students Trained", icon: Users },
-    { number: "5+", label: "Years Experience", icon: Award },
+    { number: "6+", label: "Years Experience", icon: Award },
     {number: '200+', label: 'Certified Students', icon: ShieldCheck},
     {number: '3+', label: 'Partnered with top universities', icon: Handshake},
     { number: "50+", label: "Performances", icon: Star },

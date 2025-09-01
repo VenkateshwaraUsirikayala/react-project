@@ -114,7 +114,7 @@ const Testimonials = () => {
   const stats = [
     { number: "500+", label: "Happy Students", icon: Users, color: "from-coral-500 to-pink-500" },
     { number: "98%", label: "Student Satisfaction", icon: Heart, color: "from-purple-500 to-indigo-500" },
-    { number: "5+", label: "Years Teaching", icon: Award, color: "from-gold-500 to-yellow-500" },
+    { number: "6+", label: "Years Teaching", icon: Award, color: "from-gold-500 to-yellow-500" },
     { number: "95%", label: "Skill Improvement", icon: TrendingUp, color: "from-green-500 to-emerald-500" }
   ];
 
