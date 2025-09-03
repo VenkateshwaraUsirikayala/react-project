@@ -73,7 +73,7 @@ const About = () => {
                 every note, and every student has shaped who I am today.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                With over 8 years of experience in performing arts, I've
+                With over 6 years of experience in performing arts, I've
                 dedicated my life to sharing the transformative power of dance
                 and music with students from all walks of life.
               </p>

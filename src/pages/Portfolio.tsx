@@ -26,7 +26,7 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      category: 'singing',
+      category: 'students',
       type: 'image',
       title: 'Blessings From Guru',
       description: 'Every dancer’s journey begins with a prayer. After the pooja, the Guru lovingly ties the gajje (ankle bells), marking the first step of the disciple’s path',
@@ -178,7 +178,7 @@ const Portfolio = () => {
           <div className="relative max-w-4xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl">
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 z-10 bg-white/10 backdrop-blur-sm rounded-full p-2 text-white hover:bg-white/20 transition-colors duration-300"
+              className="absolute top-4 right-4 z-10 bg-black/50 backdrop-blur-sm rounded-full p-2 text-white hover:bg-black/70 transition-colors duration-300 shadow-lg"
             >
               <X className="h-6 w-6" />
             </button>
