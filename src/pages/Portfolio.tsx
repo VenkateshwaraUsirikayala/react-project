@@ -63,9 +63,9 @@ const Portfolio = () => {
       category: 'singing',
       type: 'video',
       title: 'Classical Vocal Recital',
-      description: 'Traditional Indian classical vocals with live accompaniment',
-      thumbnail: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=600&h=400&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+      description: 'Traditional Indian classical vocals with live accompaniment to tribute Lord Ganesha',
+      thumbnail: 'https://cdn.bhavanjali.art/portfolio/thumbnails/Singing-Performance.png',
+      videoUrl: 'https://cdn.bhavanjali.art/portfolio/Singing-Performance.mp4'
     }
   ];
 
