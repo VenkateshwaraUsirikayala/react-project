@@ -27,17 +27,16 @@ const Portfolio = () => {
     {
       id: 2,
       category: 'singing',
-      type: 'video',
-      title: 'Jazz Performance at Blue Note',
-      description: 'Live jazz performance featuring contemporary vocals',
-      thumbnail: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+      type: 'image',
+      title: 'Blessings From Guru',
+      description: 'Every dancer’s journey begins with a prayer. After the pooja, the Guru lovingly ties the gajje (ankle bells), marking the first step of the disciple’s path',
+      thumbnail: 'https://cdn.bhavanjali.art/portfolio/Blessings-from-Guru.jpg'
     },
     {
       id: 3,
       category: 'students',
       type: 'video',
-      title: 'Candid Student Performances on Stage',
+      title: 'Student Performances on Stage',
       description: 'Proud moment with my students during their public performances',
       thumbnail: 'https://cdn.bhavanjali.art/portfolio/thumbnails/Student-Showcase.png',
       videoUrl: 'https://cdn.bhavanjali.art/portfolio/Student-showcase.mp4'
@@ -45,11 +44,10 @@ const Portfolio = () => {
     {
       id: 4,
       category: 'dance',
-      type: 'video',
-      title: 'Contemporary Fusion',
-      description: 'Modern dance piece blending Eastern and Western styles',
-      thumbnail: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=600&h=400&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+      type: 'image',
+      title: 'Tribute to Lord Shiva',
+      description: 'In every step, a prayer; in every gesture, a tribute to Lord Shiva — Nataraja, the cosmic dancer and source of all creation.',
+      thumbnail: 'https://cdn.bhavanjali.art/portfolio/Kids_Tribute.jpg'
     },
     {
       id: 5,
