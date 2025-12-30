@@ -65,7 +65,7 @@ const Portfolio = () => {
       title: 'Classical Vocal Recital',
       description: 'Traditional Indian classical vocals with live accompaniment to tribute Lord Ganesha',
       thumbnail: 'https://pub-0a0616f707eb40dfa8d6bc5829bad8d1.r2.dev/Portfolio/Singing-Performance.png',
-      videoUrl: 'https://pub-0a0616f707eb40dfa8d6bc5829bad8d1.r2.dev/Portfolio/Singing-Performance.mp4'
+      videoUrl: 'https://pub-0a0616f707eb40dfa8d6bc5829bad8d1.r2.dev/Portfolio/Singing_Performance.mp4'
     }
   ];
 
