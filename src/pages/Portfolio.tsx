@@ -21,8 +21,8 @@ const Portfolio = () => {
       type: 'video',
       title: 'Bharatanatyam Recital 2023',
       description: 'Traditional Bharatanatyam performance at the Cultural Arts Festival',
-      thumbnail: 'https://cdn.bhavanjali.art/portfolio/thumbnails/Student-Performances.png',
-      videoUrl: 'https://cdn.bhavanjali.art/portfolio/Student-Performances.mp4'
+      thumbnail: 'https://pub-0a0616f707eb40dfa8d6bc5829bad8d1.r2.dev/Portfolio/Student-Performances.png',
+      videoUrl: 'https://pub-0a0616f707eb40dfa8d6bc5829bad8d1.r2.dev/Portfolio/Student-Performances.mp4'
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ const Portfolio = () => {
       type: 'image',
       title: 'Blessings From Guru',
       description: 'Every dancer’s journey begins with a prayer. After the pooja, the Guru lovingly ties the gajje (ankle bells), marking the first step of the disciple’s path',
-      thumbnail: 'https://cdn.bhavanjali.art/portfolio/Blessings-from-Guru.jpg'
+      thumbnail: 'https://pub-0a0616f707eb40dfa8d6bc5829bad8d1.r2.dev/Portfolio/Blessings-from-Guru.jpg'
     },
     {
       id: 3,
@@ -38,8 +38,8 @@ const Portfolio = () => {
       type: 'video',
       title: 'Student Performances on Stage',
       description: 'Proud moment with my students during their public performances',
-      thumbnail: 'https://cdn.bhavanjali.art/portfolio/thumbnails/Student-Showcase.png',
-      videoUrl: 'https://cdn.bhavanjali.art/portfolio/Student-showcase.mp4'
+      thumbnail: 'https://pub-0a0616f707eb40dfa8d6bc5829bad8d1.r2.dev/Portfolio/Student-Showcase.png',
+      videoUrl: 'https://pub-0a0616f707eb40dfa8d6bc5829bad8d1.r2.dev/Portfolio/Students-Showcase.mp4'
     },
     {
       id: 4,
@@ -47,7 +47,7 @@ const Portfolio = () => {
       type: 'image',
       title: 'Tribute to Lord Shiva',
       description: 'In every step, a prayer; in every gesture, a tribute to Lord Shiva — Nataraja, the cosmic dancer and source of all creation.',
-      thumbnail: 'https://cdn.bhavanjali.art/portfolio/Kids_Tribute.jpg'
+      thumbnail: 'https://pub-0a0616f707eb40dfa8d6bc5829bad8d1.r2.dev/Portfolio/Kids_Tribute.jpg'
     },
     {
       id: 5,
@@ -55,8 +55,8 @@ const Portfolio = () => {
       type: 'video',
       title: 'Behind the Scenes',
       description: 'Behind the scenes moments during intensive training sessions',
-      thumbnail: 'https://cdn.bhavanjali.art/portfolio/thumbnails/Behind-the-Scenes.png',
-      videoUrl: 'https://cdn.bhavanjali.art/portfolio/Behind-the-Scenes.mp4'
+      thumbnail: 'https://pub-0a0616f707eb40dfa8d6bc5829bad8d1.r2.dev/Portfolio/Behind-the-Scenes.png',
+      videoUrl: 'https://pub-0a0616f707eb40dfa8d6bc5829bad8d1.r2.dev/Portfolio/Behind-the-Scenes.mp4'
     },
     {
       id: 6,
@@ -64,8 +64,8 @@ const Portfolio = () => {
       type: 'video',
       title: 'Classical Vocal Recital',
       description: 'Traditional Indian classical vocals with live accompaniment to tribute Lord Ganesha',
-      thumbnail: 'https://cdn.bhavanjali.art/portfolio/thumbnails/Singing-Performance.png',
-      videoUrl: 'https://cdn.bhavanjali.art/portfolio/Singing-Performance.mp4'
+      thumbnail: 'https://pub-0a0616f707eb40dfa8d6bc5829bad8d1.r2.dev/Portfolio/Singing-Performance.png',
+      videoUrl: 'https://pub-0a0616f707eb40dfa8d6bc5829bad8d1.r2.dev/Portfolio/Singing-Performance.mp4'
     }
   ];
 
